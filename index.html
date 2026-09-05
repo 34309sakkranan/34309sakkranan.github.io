@@ -3,312 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sakranan Khamthong | Portfolio</title>
-
-    <link rel="stylesheet" href="style.css">
+    <title>ศักรนันทน์ คำทอง | Portfolio</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            background: #111111;
+            color: #eeeeee;
+            font-family: Arial, Tahoma, sans-serif;
+            line-height: 1.8;
+        }
+        /* เมนูด้านบน */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(17, 17, 17, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #333333;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        nav a {
+            color: #bbbbbb;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #ffffff;
+        }
+        /* ส่วนแนะนำตัว */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background:
+                radial-gradient(circle at top right, #333333, transparent 35%),
+                #111111;
+        }
+        .hero-content {
+            max-width: 800px;
+        }
+        .profile-icon {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: #2a2a2a;
+            border: 2px solid #555555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 45px;
+        }
+        .small-title {
+            color: #999999;
+            letter-spacing: 4px;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+        h1 {
+            font-size: 42px;
+            margin: 0 0 15px;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+        .hero p {
+            color: #aaaaaa;
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .line {
+            width: 70px;
+            height: 3px;
+            background: #777777;
+            margin: 25px auto;
+        }
+        /* ส่วนเนื้อหา */
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 80px 25px;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        .section-title h2 {
+            font-size: 30px;
+            margin: 0 0 10px;
+            color: #ffffff;
+        }
+        .section-title p {
+            color: #888888;
+            font-size: 14px;
+        }
+        /* การ์ด */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .card {
+            background: #1c1c1c;
+            border: 1px solid #333333;
+            border-radius: 15px;
+            padding: 28px;
+            transition: 0.3s;
+        }
+        .card:hover {
+            border-color: #666666;
+            transform: translateY(-4px);
+        }
+        .card h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        .card p {
+            color: #aaaaaa;
+            font-size: 16px;
+            margin: 0;
+        }
+        /* ข้อมูลการศึกษา */
+        .education {
+            border-left: 3px solid #666666;
+            padding-left: 25px;
+            margin-bottom: 25px;
+        }
+        .education h3 {
+            margin: 0;
+            color: #ffffff;
+            font-size: 20px;
+        }
+        .education p {
+            color: #aaaaaa;
+            margin: 5px 0;
+        }
+        /* เป้าหมาย */
+        .goal {
+            text-align: center;
+            background: #1c1c1c;
+            border: 1px solid #333333;
+            border-radius: 20px;
+            padding: 45px 25px;
+        }
+        .goal h3 {
+            font-size: 25px;
+            color: #ffffff;
+            margin-top: 0;
+        }
+        .goal p {
+            color: #aaaaaa;
+            font-size: 17px;
+        }
+        /* ผลงาน */
+        .work {
+            text-align: center;
+            background: #1c1c1c;
+            border: 1px dashed #555555;
+            border-radius: 15px;
+            padding: 40px 20px;
+        }
+        .work-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            filter: grayscale(100%);
+        }
+        .work h3 {
+            color: #ffffff;
+            margin: 0 0 10px;
+        }
+        .work p {
+            color: #999999;
+            margin: 0;
+        }
+        /* ส่วนท้าย */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid #333333;
+            color: #777777;
+            font-size: 13px;
+        }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
+            .cards {
+                grid-template-columns: 1fr;
+            }
+            section {
+                padding: 55px 20px;
+            }
+            nav a {
+                margin: 0 6px;
+                font-size: 12px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-    <!-- Navigation -->
+    <!-- เมนูด้านบน -->
     <nav>
-        <div class="logo">SAKRANAN</div>
-
-        <div class="nav-links">
-            <button onclick="showSection('home')">Home</button>
-            <button onclick="showSection('about')">About Me</button>
-            <button onclick="showSection('interest')">Interest</button>
-            <button onclick="showSection('activity')">Activities</button>
-            <button onclick="showSection('future')">Future</button>
-        </div>
+        <a href="#about">เกี่ยวกับฉัน</a>
+        <a href="#education">การศึกษา</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#goal">เป้าหมาย</a>
     </nav>
-
-
-    <!-- HOME -->
-    <section id="home" class="section active">
-
-        <div class="home-content">
-
-            <div class="profile">
-                <img src="70908.jpg" alt="Sakranan Khamthong">
+    <!-- หน้าแนะนำตัว -->
+    <div class="hero" id="about">
+        <div class="hero-content">
+            <div class="profile-icon">
+                👨‍🎓
             </div>
-
-            <div class="home-text">
-
-                <p class="small-title">
-                    ENGINEERING STUDENT ASPIRANT
-                </p>
-
-                <h1>
-                    ศักรนันทน์ คำทอง
-                </h1>
-
-                <h2>
-                    SAKRANAN KHAMTHONG
-                </h2>
-
-                <p>
-                    ชื่อเล่น <b>SON</b>
-                </p>
-
-                <p>
-                    นักเรียนชั้นมัธยมศึกษาปีที่ 6<br>
-                    โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์
-                </p>
-
-                <p>
-                    แผนการเรียนเตรียมวิศวะ
-                </p>
-
-                <div class="target">
-                    <b>เป้าหมาย</b><br>
-                    วิศวกรรมอุตสาหการ<br>
-                    มหาวิทยาลัยเกษตรศาสตร์ บางเขน
-                </div>
-
-                <button class="main-button"
-                        onclick="showSection('about')">
-                    ดู Portfolio →
-                </button>
-
+            <div class="small-title">
+                PORTFOLIO
             </div>
-
+            <h1>
+                นายศักรนันทน์ คำทอง
+            </h1>
+            <div class="line"></div>
+            <p>
+                สวัสดีครับ ยินดีต้อนรับสู่แฟ้มสะสมผลงานของผม
+            </p>
+            <p>
+                นักเรียนชั้นมัธยมศึกษาปีที่ 6
+            </p>
         </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-
-        <div class="content">
-
-            <p class="small-title">01 — ABOUT ME</p>
-
-            <h1>เกี่ยวกับผม</h1>
-
+    </div>
+    <!-- ข้อมูลส่วนตัว -->
+    <section id="education">
+        <div class="section-title">
+            <h2>เกี่ยวกับฉัน</h2>
+            <p>ABOUT ME</p>
+        </div>
+        <div class="cards">
             <div class="card">
-
+                <h3>👤 ข้อมูลส่วนตัว</h3>
                 <p>
-                    ผมเป็นนักเรียนที่สนใจด้านวิศวกรรม
-                    โดยเฉพาะการคิดอย่างเป็นระบบ
-                    การแก้ปัญหา และการนำข้อมูลมาใช้ในการตัดสินใจ
+                    ชื่อ: นายศักรนันทน์ คำทอง<br>
+                    ระดับชั้น: มัธยมศึกษาปีที่ 6
                 </p>
-
-                <p>
-                    ผมเป็นคนที่ถ้าสนใจเรื่องอะไรแล้ว
-                    จะพยายามศึกษาและทำความเข้าใจเรื่องนั้น
-                    จนกว่าจะสามารถทำได้
-                </p>
-
-                <p>
-                    สิ่งที่ผมสนใจเป็นพิเศษคือ
-                    <b>ระบบ ข้อมูล การเขียนโปรแกรม
-                    การเพิ่มประสิทธิภาพ และการเงิน</b>
-                </p>
-
             </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- INTEREST -->
-    <section id="interest" class="section">
-
-        <div class="content">
-
-            <p class="small-title">02 — MY INTERESTS</p>
-
-            <h1>สิ่งที่ผมสนใจ</h1>
-
-            <div class="interest-grid">
-
-                <div class="interest-card">
-                    <h2>⚙️ Engineering</h2>
-                    <p>
-                        การออกแบบระบบ การแก้ปัญหา
-                        และการทำให้กระบวนการทำงานมีประสิทธิภาพมากขึ้น
-                    </p>
-                </div>
-
-                <div class="interest-card">
-                    <h2>📊 Data</h2>
-                    <p>
-                        การนำข้อมูลมาวิเคราะห์
-                        เพื่อช่วยในการตัดสินใจและแก้ปัญหา
-                    </p>
-                </div>
-
-                <div class="interest-card">
-                    <h2>💻 Programming</h2>
-                    <p>
-                        สนใจการเขียนโปรแกรม
-                        และการนำเทคโนโลยีมาสร้างระบบที่สามารถใช้งานจริง
-                    </p>
-                </div>
-
-                <div class="interest-card">
-                    <h2>📈 Finance</h2>
-                    <p>
-                        สนใจเรื่องการเงิน การลงทุน
-                        และการวิเคราะห์ข้อมูลทางการเงิน
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- WHY IE -->
-    <section id="why-ie" class="section">
-
-        <div class="content">
-
-            <p class="small-title">03 — WHY INDUSTRIAL ENGINEERING?</p>
-
-            <h1>ทำไมถึงสนใจวิศวกรรมอุตสาหการ?</h1>
-
             <div class="card">
-
+                <h3>🎓 แผนการเรียน</h3>
                 <p>
-                    ผมสนใจวิศวกรรมอุตสาหการ เพราะเป็นศาสตร์ที่เกี่ยวข้องกับ
-                    <b>ระบบ คน ข้อมูล เวลา และทรัพยากร</b>
-                    และมีเป้าหมายในการทำให้ระบบทำงานได้อย่างมีประสิทธิภาพมากขึ้น
+                    แผนการเรียน<br>
+                    เตรียมวิศวกรรมศาสตร์
                 </p>
-
-                <p>
-                    ผมชอบการคิดว่า
-                    "เราจะทำสิ่งนี้ให้ดีขึ้นได้อย่างไร?"
-                    ไม่ว่าจะเป็นการลดต้นทุน ลดเวลา
-                    หรือปรับปรุงกระบวนการทำงาน
-                </p>
-
-                <p>
-                    นอกจากนี้ ผมมองว่าวิศวกรรมอุตสาหการ
-                    สามารถเป็นพื้นฐานที่ดีในการต่อยอดไปยัง
-                    Data, Programming และ Financial Engineering
-                    ที่ผมสนใจในอนาคต
-                </p>
-
             </div>
-
         </div>
-
     </section>
-
-
-    <!-- ACTIVITIES -->
-    <section id="activity" class="section">
-
-        <div class="content">
-
-            <p class="small-title">04 — ACTIVITIES & CERTIFICATES</p>
-
-            <h1>กิจกรรมและผลงาน</h1>
-
-            <div class="gallery">
-
-                <div class="image-card">
-                    <img src="70909.jpg">
-                    <p>กิจกรรมด้านการลงทุนและการจัดการพอร์ต</p>
-                </div>
-
-                <div class="image-card">
-                    <img src="70912.jpg">
-                    <p>High Caliber Engineering Competency Test</p>
-                </div>
-
-                <div class="image-card">
-                    <img src="70913.jpg">
-                    <p>Financial Planning Workshop</p>
-                </div>
-
-                <div class="image-card">
-                    <img src="70914.jpg">
-                    <p>Mini Startup Camp</p>
-                </div>
-
-                <div class="image-card">
-                    <img src="70910.jpg">
-                    <p>กิจกรรมและประสบการณ์ด้านวิศวกรรม</p>
-                </div>
-
-                <div class="image-card">
-                    <img src="70911.jpg">
-                    <p>ประสบการณ์การเรียนรู้ด้านวิศวกรรม</p>
-                </div>
-
-                <div class="image-card">
-                    <img src="70915.jpg">
-                    <p>กิจกรรมด้านวิทยาศาสตร์และเทคโนโลยี</p>
-                </div>
-
-            </div>
-
+    <!-- การศึกษา -->
+    <section>
+        <div class="section-title">
+            <h2>ประวัติการศึกษา</h2>
+            <p>EDUCATION</p>
         </div>
-
-    </section>
-
-
-    <!-- FUTURE -->
-    <section id="future" class="section">
-
-        <div class="content">
-
-            <p class="small-title">05 — MY FUTURE</p>
-
-            <h1>เป้าหมายในอนาคต</h1>
-
-            <div class="timeline">
-
-                <div>
-                    <span>01</span>
-                    <h2>Industrial Engineering</h2>
-                    <p>
-                        ศึกษาวิศวกรรมอุตสาหการ
-                        และพัฒนาความรู้ด้านระบบ ข้อมูล
-                        และการเพิ่มประสิทธิภาพ
-                    </p>
-                </div>
-
-                <div>
-                    <span>02</span>
-                    <h2>Data & Programming</h2>
-                    <p>
-                        พัฒนาทักษะด้านการเขียนโปรแกรม
-                        การวิเคราะห์ข้อมูล และการสร้างระบบ
-                    </p>
-                </div>
-
-                <div>
-                    <span>03</span>
-                    <h2>Financial Engineering</h2>
-                    <p>
-                        ในอนาคตต้องการศึกษาต่อด้าน
-                        Financial Engineering
-                        และนำความรู้ด้านวิศวกรรม
-                        มาประยุกต์ใช้กับการเงิน
-                    </p>
-                </div>
-
-            </div>
-
-            <div class="quote">
-                <h2>“Build Systems. Solve Problems. Create Impact.”</h2>
-            </div>
-
+        <div class="education">
+            <h3>ระดับมัธยมศึกษาตอนปลาย</h3>
+            <p>กำลังศึกษาชั้นมัธยมศึกษาปีที่ 6</p>
+            <p>แผนการเรียนเตรียมวิศวกรรมศาสตร์</p>
         </div>
-
+        <div class="education">
+            <h3>ความสนใจด้านการเรียน</h3>
+            <p>วิทยาศาสตร์ เทคโนโลยี และการพัฒนาความรู้</p>
+        </div>
     </section>
-
-
-    <script src="script.js"></script>
-
+    <!-- แฟ้มสะสมผลงาน -->
+    <section id="portfolio">
+        <div class="section-title">
+            <h2>แฟ้มสะสมผลงาน</h2>
+            <p>MY PORTFOLIO</p>
+        </div>
+        <div class="work">
+            <div class="work-icon">📁</div>
+            <h3>ผลงานและกิจกรรม</h3>
+            <p>
+                พื้นที่สำหรับใส่รูปภาพผลงาน<br>
+                กิจกรรม เกียรติบัตร และประสบการณ์ต่าง ๆ
+            </p>
+        </div>
+    </section>
+    <!-- เป้าหมาย -->
+    <section id="goal">
+        <div class="section-title">
+            <h2>เป้าหมายในชีวิต</h2>
+            <p>MY GOAL</p>
+        </div>
+        <div class="goal">
+            <h3>คุณครูวิทยาศาสตร์</h3>
+            <p>
+                มุ่งมั่นพัฒนาความรู้และทักษะด้านวิทยาศาสตร์
+                เพื่อก้าวไปสู่การเป็นคุณครูวิทยาศาสตร์ในอนาคต
+            </p>
+        </div>
+    </section>
+    <footer>
+        © 2026 นายศักรนันทน์ คำทอง | Portfolio
+    </footer>
 </body>
 </html>
