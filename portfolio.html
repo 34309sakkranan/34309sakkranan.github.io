@@ -14,13 +14,11 @@
 
 html {
     width: 100%;
-    min-height: 100%;
 }
 
 body {
-    width: 100%;
-    min-height: 100%;
     margin: 0;
+    width: 100%;
     font-family: Arial, Tahoma, sans-serif;
     color: #263238;
     background: linear-gradient(135deg, #dff6ff, #bde7f7, #d5f5e8);
@@ -40,7 +38,7 @@ body {
 
     width: 100%;
     min-height: 75px;
-    padding: 15px 35px;
+    padding: 15px 30px;
 
     display: flex;
     justify-content: flex-end;
@@ -61,7 +59,7 @@ body {
 
     text-decoration: none;
     text-align: center;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
 
     border-radius: 12px;
@@ -74,7 +72,7 @@ body {
 }
 
 /* ========================= */
-/* หน้าเต็มจอ */
+/* ทุกหน้าเต็มหน้าจอ */
 /* ========================= */
 
 .page {
@@ -93,7 +91,7 @@ body {
     max-width: 1250px;
     min-height: calc(100vh - 155px);
 
-    padding: 50px;
+    padding: 45px;
 
     background: rgba(255, 255, 255, 0.98);
     border: 2px solid #c7eaf5;
@@ -111,7 +109,7 @@ body {
 /* ========================= */
 
 .page-title {
-    margin: 0 0 12px;
+    margin: 0 0 10px;
     text-align: center;
     color: #1565c0;
     font-size: 42px;
@@ -129,13 +127,13 @@ body {
 .line {
     width: 90px;
     height: 4px;
-    margin: 0 auto 35px;
+    margin: 0 auto 30px;
     background: #29b6f6;
     border-radius: 10px;
 }
 
 /* ========================= */
-/* หน้าคำนำ */
+/* หน้า 1 : คำนำ */
 /* ========================= */
 
 .preface-content {
@@ -170,7 +168,7 @@ body {
 }
 
 /* ========================= */
-/* หน้า About me */
+/* หน้า 2 : About me */
 /* ========================= */
 
 .about-layout {
@@ -217,15 +215,12 @@ body {
 }
 
 .about-text h2 {
-    margin: 0 0 25px;
+    margin: 0 0 20px;
     color: #00897b;
     font-size: 30px;
 }
 
-/* ========================= */
-/* ข้อมูลแต่ละบรรทัด */
-/* ========================= */
-
+/* ข้อมูลคนละบรรทัด */
 .info-box {
     width: 100%;
     padding: 25px 30px;
@@ -268,15 +263,64 @@ body {
 }
 
 /* ========================= */
-/* หน้าผลงาน */
+/* หน้า 3 : มหาวิทยาลัยและเป้าหมาย */
+/* ========================= */
+
+.future-grid {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.future-card {
+    min-height: 330px;
+    padding: 35px;
+
+    background: #f4fcff;
+    border: 2px solid #d5edf5;
+    border-radius: 22px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(35, 90, 120, 0.06);
+}
+
+.future-icon {
+    font-size: 65px;
+    margin-bottom: 15px;
+}
+
+.future-card h2 {
+    margin: 0 0 20px;
+    color: #1565c0;
+    font-size: 28px;
+}
+
+.future-card p {
+    margin: 0;
+    color: #455a64;
+    font-size: 19px;
+    line-height: 2;
+}
+
+.future-card strong {
+    color: #00897b;
+}
+
+/* ========================= */
+/* หน้า 4 : ผลงาน */
 /* ========================= */
 
 .work-intro {
-    text-align: center;
+    margin: 0 auto 30px;
+    max-width: 850px;
+
     color: #455a64;
     font-size: 19px;
     line-height: 1.8;
-    margin-bottom: 30px;
+    text-align: center;
 }
 
 .work-grid {
@@ -288,38 +332,52 @@ body {
 }
 
 .work-card {
-    min-height: 220px;
-    padding: 25px 20px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
+    min-height: 350px;
+    padding: 20px;
 
     background: #f4fcff;
     border: 2px solid #d5edf5;
     border-radius: 20px;
 
+    text-align: center;
     transition: 0.25s;
 }
 
 .work-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(35, 90, 120, 0.12);
     border-color: #29b6f6;
+    box-shadow: 0 10px 25px rgba(35, 90, 120, 0.12);
 }
 
-.work-icon {
-    font-size: 50px;
-    margin-bottom: 15px;
+/* ช่องใส่รูปผลงาน */
+.work-image {
+    width: 100%;
+    height: 170px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #78909c;
+    background: #eaf9ff;
+    border: 2px dashed #90caf9;
+    border-radius: 15px;
+    font-size: 17px;
+    overflow: hidden;
+}
+
+.work-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .work-card h3 {
     margin: 0 0 12px;
     color: #1565c0;
-    font-size: 21px;
+    font-size: 22px;
 }
 
 .work-card p {
@@ -329,50 +387,9 @@ body {
     line-height: 1.7;
 }
 
-/* ช่องใส่รูปผลงานภายหลัง */
-.work-image {
-    width: 100%;
-    height: 130px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-bottom: 15px;
-
-    color: #78909c;
-    background: #eaf9ff;
-    border: 2px dashed #90caf9;
-    border-radius: 15px;
-    font-size: 16px;
-}
-
 /* ========================= */
-/* ปุ่มกลับหน้าแรก */
+/* ท้ายหน้า */
 /* ========================= */
-
-.home-button {
-    display: block;
-    width: fit-content;
-
-    margin: 35px auto 0;
-    padding: 14px 30px;
-
-    color: white;
-    background: #1565c0;
-
-    text-decoration: none;
-    font-size: 17px;
-    font-weight: bold;
-
-    border-radius: 12px;
-    transition: 0.25s;
-}
-
-.home-button:hover {
-    background: #0d47a1;
-    transform: translateY(-3px);
-}
 
 footer {
     margin-top: 30px;
@@ -521,12 +538,29 @@ footer {
         font-size: 16px;
     }
 
+    .future-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .future-card {
+        min-height: auto;
+        padding: 25px 20px;
+    }
+
+    .future-card h2 {
+        font-size: 24px;
+    }
+
+    .future-card p {
+        font-size: 17px;
+    }
+
     .work-grid {
         grid-template-columns: 1fr;
     }
 
     .work-card {
-        min-height: 200px;
+        min-height: 320px;
     }
 }
 </style>
@@ -541,6 +575,7 @@ footer {
 <nav class="top-menu">
     <a href="#preface">📖 คำนำ</a>
     <a href="#about">👤 About me</a>
+    <a href="#future">🎓 มหาวิทยาลัย</a>
     <a href="#works">📁 ผลงาน</a>
     <a href="index.html">🏠 หน้าแรก</a>
 </nav>
@@ -633,7 +668,7 @@ footer {
 
         <div class="about-layout">
 
-            <!-- รูปเดิมจากหน้า index -->
+            <!-- รูปเดิม -->
             <div class="profile-frame">
                 <img
                     src="IMG_1529.jpeg"
@@ -665,7 +700,7 @@ footer {
                     <div class="info-row">
                         <div class="info-label">วันเดือนปีเกิด</div>
                         <div class="info-value">
-                            18 ตุลาคม 2551
+                            2 มีนาคม 2552
                         </div>
                     </div>
 
@@ -677,39 +712,30 @@ footer {
                     </div>
 
                     <div class="info-row">
-                        <div class="info-label">มหาวิทยาลัยที่สนใจ</div>
+                        <div class="info-label">โรงเรียน</div>
                         <div class="info-value">
-                            มหาวิทยาลัยเกษตรศาสตร์ บางเขน
-                        </div>
-                    </div>
-
-                    <div class="info-row">
-                        <div class="info-label">เป้าหมายในชีวิต</div>
-                        <div class="info-value">
-                            ศึกษาต่อคณะวิศวกรรมศาสตร์
-                            สาขาวิศวกรรมอุตสาหการ
-                            และประกอบอาชีพวิศวกรอุตสาหการ
+                            โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”
                         </div>
                     </div>
 
                     <div class="info-row">
                         <div class="info-label">เบอร์โทรศัพท์</div>
                         <div class="info-value">
-                            กรอกเบอร์โทรศัพท์ของคุณ
+                            0927814013
                         </div>
                     </div>
 
                     <div class="info-row">
                         <div class="info-label">Facebook</div>
                         <div class="info-value">
-                            กรอกชื่อ Facebook ของคุณ
+                            Sakranan kamthong
                         </div>
                     </div>
 
                     <div class="info-row">
                         <div class="info-label">Gmail</div>
                         <div class="info-value">
-                            กรอก Gmail ของคุณ
+                            Sakkranankamthong1@gmail.com
                         </div>
                     </div>
 
@@ -729,7 +755,90 @@ footer {
 
 
 <!-- ========================= -->
-<!-- หน้าสุดท้าย : ผลงาน -->
+<!-- หน้า 3 : มหาวิทยาลัยและเป้าหมาย -->
+<!-- ========================= -->
+
+<section class="page" id="future">
+
+    <div class="page-box">
+
+        <h1 class="page-title">My Future</h1>
+
+        <div class="page-subtitle">
+            มหาวิทยาลัยที่สนใจและเป้าหมายในชีวิต
+        </div>
+
+        <div class="line"></div>
+
+        <div class="future-grid">
+
+            <!-- มหาวิทยาลัยที่สนใจ -->
+            <div class="future-card">
+
+                <div class="future-icon">🎓</div>
+
+                <h2>มหาวิทยาลัยที่สนใจ</h2>
+
+                <p>
+                    <strong>มหาวิทยาลัยเกษตรศาสตร์</strong>
+                </p>
+
+                <p>
+                    วิทยาเขตบางเขน
+                </p>
+
+                <p>
+                    คณะที่สนใจ:
+                    <strong>คณะวิศวกรรมศาสตร์</strong>
+                </p>
+
+                <p>
+                    สาขา:
+                    <strong>วิศวกรรมอุตสาหการ</strong>
+                </p>
+
+            </div>
+
+            <!-- เป้าหมายในชีวิต -->
+            <div class="future-card">
+
+                <div class="future-icon">🎯</div>
+
+                <h2>เป้าหมายในชีวิต</h2>
+
+                <p>
+                    ข้าพเจ้ามีเป้าหมายที่จะศึกษาต่อ
+                    ในคณะวิศวกรรมศาสตร์
+                    สาขาวิศวกรรมอุตสาหการ
+                </p>
+
+                <p>
+                    เพื่อพัฒนาความรู้ด้านการวางแผน
+                    การจัดการ และการปรับปรุงกระบวนการ
+                    ให้มีประสิทธิภาพ
+                </p>
+
+                <p>
+                    และนำความรู้ไปประกอบอาชีพ
+                    <strong>วิศวกรอุตสาหการ</strong>
+                    ในอนาคต
+                </p>
+
+            </div>
+
+        </div>
+
+        <footer>
+            ความฝันเริ่มต้นจากความตั้งใจและการลงมือทำ
+        </footer>
+
+    </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- หน้า 4 : ผลงาน -->
 <!-- ========================= -->
 
 <section class="page" id="works">
@@ -745,14 +854,15 @@ footer {
         <div class="line"></div>
 
         <p class="work-intro">
-            รวบรวมผลงาน กิจกรรม และประสบการณ์
-            ที่แสดงถึงความสนใจ ความสามารถ
-            และการพัฒนาตนเองของข้าพเจ้า
+            รวบรวมผลงานและกิจกรรมที่แสดงถึงความสนใจ
+            ความสามารถ และการพัฒนาตนเองของข้าพเจ้า
         </p>
 
         <div class="work-grid">
 
+            <!-- ผลงานที่ 1 -->
             <div class="work-card">
+
                 <div class="work-image">
                     📷 ใส่รูปผลงานที่ 1
                 </div>
@@ -760,12 +870,15 @@ footer {
                 <h3>ผลงานด้านวิทยาศาสตร์</h3>
 
                 <p>
-                    ใส่รายละเอียดเกี่ยวกับโครงงาน
-                    หรือผลงานด้านวิทยาศาสตร์
+                    โครงงานหรือกิจกรรมด้านวิทยาศาสตร์
+                    ที่เคยจัดทำหรือเข้าร่วม
                 </p>
+
             </div>
 
+            <!-- ผลงานที่ 2 -->
             <div class="work-card">
+
                 <div class="work-image">
                     📷 ใส่รูปผลงานที่ 2
                 </div>
@@ -773,68 +886,29 @@ footer {
                 <h3>ผลงานด้านเทคโนโลยี</h3>
 
                 <p>
-                    ใส่รายละเอียดเกี่ยวกับการสร้างเว็บไซต์
-                    หรือผลงานด้านเทคโนโลยี
+                    ผลงานการสร้างเว็บไซต์
+                    หรือกิจกรรมที่เกี่ยวข้องกับเทคโนโลยี
                 </p>
+
             </div>
 
+            <!-- ผลงานที่ 3 -->
             <div class="work-card">
+
                 <div class="work-image">
                     📷 ใส่รูปผลงานที่ 3
                 </div>
 
-                <h3>กิจกรรมการเรียนรู้</h3>
+                <h3>กิจกรรมและประสบการณ์</h3>
 
                 <p>
-                    ใส่รายละเอียดกิจกรรม
-                    ที่เคยเข้าร่วม
+                    กิจกรรมการเรียนรู้ กิจกรรมจิตอาสา
+                    หรือประสบการณ์ที่ภาคภูมิใจ
                 </p>
-            </div>
 
-            <div class="work-card">
-                <div class="work-image">
-                    📷 ใส่รูปผลงานที่ 4
-                </div>
-
-                <h3>กิจกรรมจิตอาสา</h3>
-
-                <p>
-                    ใส่รายละเอียดกิจกรรมจิตอาสา
-                    และการช่วยเหลือสังคม
-                </p>
-            </div>
-
-            <div class="work-card">
-                <div class="work-image">
-                    📷 ใส่รูปผลงานที่ 5
-                </div>
-
-                <h3>ผลงานที่ภาคภูมิใจ</h3>
-
-                <p>
-                    ใส่รายละเอียดผลงาน
-                    ที่ภาคภูมิใจที่สุด
-                </p>
-            </div>
-
-            <div class="work-card">
-                <div class="work-image">
-                    📷 ใส่รูปผลงานที่ 6
-                </div>
-
-                <h3>ประสบการณ์อื่น ๆ</h3>
-
-                <p>
-                    ใส่รายละเอียดความสามารถ
-                    และประสบการณ์เพิ่มเติม
-                </p>
             </div>
 
         </div>
-
-        <a href="index.html" class="home-button">
-            🏠 กลับหน้าแรก
-        </a>
 
         <footer>
             © 2026 Portfolio ของนายศักรนันทน์ คำทอง
