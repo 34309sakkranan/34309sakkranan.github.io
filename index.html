@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>หน้าหลักเว็บไซต์ของผม</title>
+    <title>ศักรนันทน์ คำทอง | Portfolio</title>
 
     <style>
         * {
@@ -15,13 +15,13 @@
             min-height: 100vh;
             background: linear-gradient(
                 135deg,
-                #111111,
-                #242424,
-                #3a3a3a
+                #dff6ff,
+                #bde7f7,
+                #d5f5e8
             );
-            color: #333;
+            color: #263238;
             text-align: center;
-            padding: 30px 20px;
+            padding: 25px 15px;
             font-family: Arial, Tahoma, sans-serif;
             display: flex;
             justify-content: center;
@@ -30,14 +30,14 @@
 
         .card {
             background: rgba(255, 255, 255, 0.97);
-            border-radius: 35px;
+            border-radius: 28px;
             box-shadow:
-                0 15px 45px rgba(0, 0, 0, 0.35);
+                0 18px 45px rgba(35, 90, 120, 0.18);
             width: 100%;
-            min-height: calc(100vh - 60px);
+            min-height: calc(100vh - 50px);
             margin: auto;
-            padding: 60px 35px;
-            border: 1px solid #555555;
+            padding: 55px 35px;
+            border: 2px solid #c7eaf5;
             position: relative;
             overflow: hidden;
             display: flex;
@@ -50,23 +50,23 @@
         .card::before {
             content: "";
             position: absolute;
-            width: 180px;
-            height: 180px;
-            background: #eeeeee;
+            width: 200px;
+            height: 200px;
+            background: #d5f3ff;
             border-radius: 50%;
-            top: -90px;
-            left: -60px;
+            top: -100px;
+            left: -70px;
         }
 
         .card::after {
             content: "";
             position: absolute;
-            width: 150px;
-            height: 150px;
-            background: #e2e2e2;
+            width: 170px;
+            height: 170px;
+            background: #d9f5e8;
             border-radius: 50%;
-            bottom: -75px;
-            right: -50px;
+            bottom: -85px;
+            right: -55px;
         }
 
         .decoration {
@@ -74,17 +74,16 @@
             z-index: 2;
             font-size: 30px;
             margin-bottom: 25px;
-            letter-spacing: 10px;
-            filter: grayscale(100%);
+            letter-spacing: 8px;
         }
 
         h1 {
             position: relative;
             z-index: 2;
-            color: #222222;
+            color: #1565c0;
             font-size: 42px;
             line-height: 1.5;
-            margin: 0 0 35px;
+            margin: 0 0 30px;
             font-weight: bold;
         }
 
@@ -93,21 +92,45 @@
             z-index: 2;
             font-size: 21px;
             line-height: 2;
-            color: #444444;
-            margin: 18px 0;
+            color: #455a64;
+            margin: 15px 0;
         }
 
         strong {
-            color: #222222;
+            color: #00897b;
         }
 
         .line {
             position: relative;
             z-index: 2;
             width: 80px;
-            height: 3px;
-            background: #555555;
+            height: 4px;
+            background: #29b6f6;
+            border-radius: 10px;
             margin: 0 auto 25px;
+        }
+
+        /* ปุ่มเข้า Portfolio */
+        .btn {
+            position: relative;
+            z-index: 3;
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 32px;
+            background: #1565c0;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 12px;
+            box-shadow:
+                0 8px 20px rgba(21, 101, 192, 0.25);
+            transition: 0.25s;
+        }
+
+        .btn:hover {
+            background: #0d47a1;
+            transform: translateY(-4px);
         }
 
         @media (max-width: 600px) {
@@ -118,7 +141,7 @@
             .card {
                 min-height: calc(100vh - 30px);
                 padding: 40px 20px;
-                border-radius: 25px;
+                border-radius: 24px;
             }
 
             h1 {
@@ -132,6 +155,11 @@
             .decoration {
                 font-size: 25px;
             }
+
+            .btn {
+                font-size: 16px;
+                padding: 13px 25px;
+            }
         }
     </style>
 </head>
@@ -141,11 +169,11 @@
     <div class="card">
 
         <div class="decoration">
-            ☁️ 🙌🏻🙌🏻
+            ⚡ 🧢 ✦
         </div>
 
         <h1>
-            ยินดีต้อนรับสู่โปรไฟล์ของผม
+            👋 ยินดีต้อนรับสู่โปรไฟล์ของฉัน
         </h1>
 
         <div class="line"></div>
@@ -158,13 +186,17 @@
         </p>
 
         <p>
-            📍ขณะนี้กำลังศึกษาชั้นมัธยมศึกษาปีที่ 6
-            แผนการเรียน เตรียมวิศวกรรมศาสตร์👷‍♂️
+            📍 ขณะนี้กำลังศึกษาชั้นมัธยมศึกษาปีที่ 6
+            แผนการเรียน เตรียมวิศวกรรมศาสตร์
         </p>
 
         <p>
-            🎯เป้าหมายในชีวิต วิศวกรอุตสาหกรรม
+            🎯 เป้าหมายในชีวิต วิศกรอุตสาหการ
         </p>
+
+        <a href="portfolio.html" class="btn">
+            📁 ดูแฟ้มสะสมผลงานของฉัน →
+        </a>
 
     </div>
 
