@@ -3,319 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ศักรนันทน์ คำทอง | Portfolio</title>
+    <title>หน้าหลักเว็บไซต์ของผม</title>
+
     <style>
         * {
             box-sizing: border-box;
         }
-        html {
-            scroll-behavior: smooth;
-        }
+
         body {
             margin: 0;
-            background: #111111;
-            color: #eeeeee;
-            font-family: Arial, Tahoma, sans-serif;
-            line-height: 1.8;
-        }
-        /* เมนูด้านบน */
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(17, 17, 17, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #333333;
-            padding: 15px 20px;
-            text-align: center;
-        }
-        nav a {
-            color: #bbbbbb;
-            text-decoration: none;
-            margin: 0 12px;
-            font-size: 14px;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            color: #ffffff;
-        }
-        /* ส่วนแนะนำตัว */
-        .hero {
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 60px 20px;
-            background:
-                radial-gradient(circle at top right, #333333, transparent 35%),
-                #111111;
-        }
-        .hero-content {
-            max-width: 800px;
-        }
-        .profile-icon {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            background: #2a2a2a;
-            border: 2px solid #555555;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 25px;
-            font-size: 45px;
-        }
-        .small-title {
-            color: #999999;
-            letter-spacing: 4px;
-            font-size: 13px;
-            margin-bottom: 15px;
-        }
-        h1 {
-            font-size: 42px;
-            margin: 0 0 15px;
-            color: #ffffff;
-            letter-spacing: 1px;
-        }
-        .hero p {
-            color: #aaaaaa;
-            font-size: 18px;
-            margin: 10px 0;
-        }
-        .line {
-            width: 70px;
-            height: 3px;
-            background: #777777;
-            margin: 25px auto;
-        }
-        /* ส่วนเนื้อหา */
-        section {
-            max-width: 1000px;
-            margin: auto;
-            padding: 80px 25px;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-        .section-title h2 {
-            font-size: 30px;
-            margin: 0 0 10px;
-            color: #ffffff;
-        }
-        .section-title p {
-            color: #888888;
-            font-size: 14px;
-        }
-        /* การ์ด */
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-        .card {
-            background: #1c1c1c;
-            border: 1px solid #333333;
-            border-radius: 15px;
-            padding: 28px;
-            transition: 0.3s;
-        }
-        .card:hover {
-            border-color: #666666;
-            transform: translateY(-4px);
-        }
-        .card h3 {
-            color: #ffffff;
-            font-size: 20px;
-            margin-top: 0;
-            margin-bottom: 15px;
-        }
-        .card p {
-            color: #aaaaaa;
-            font-size: 16px;
-            margin: 0;
-        }
-        /* ข้อมูลการศึกษา */
-        .education {
-            border-left: 3px solid #666666;
-            padding-left: 25px;
-            margin-bottom: 25px;
-        }
-        .education h3 {
-            margin: 0;
-            color: #ffffff;
-            font-size: 20px;
-        }
-        .education p {
-            color: #aaaaaa;
-            margin: 5px 0;
-        }
-        /* เป้าหมาย */
-        .goal {
-            text-align: center;
-            background: #1c1c1c;
-            border: 1px solid #333333;
-            border-radius: 20px;
-            padding: 45px 25px;
-        }
-        .goal h3 {
-            font-size: 25px;
-            color: #ffffff;
-            margin-top: 0;
-        }
-        .goal p {
-            color: #aaaaaa;
-            font-size: 17px;
-        }
-        /* ผลงาน */
-        .work {
-            text-align: center;
-            background: #1c1c1c;
-            border: 1px dashed #555555;
-            border-radius: 15px;
-            padding: 40px 20px;
-        }
-        .work-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-            filter: grayscale(100%);
-        }
-        .work h3 {
-            color: #ffffff;
-            margin: 0 0 10px;
-        }
-        .work p {
-            color: #999999;
-            margin: 0;
-        }
-        /* ส่วนท้าย */
-        footer {
+            background: linear-gradient(
+                135deg,
+                #111111,
+                #242424,
+                #3a3a3a
+            );
+            color: #333;
             text-align: center;
             padding: 30px 20px;
-            border-top: 1px solid #333333;
-            color: #777777;
-            font-size: 13px;
+            font-family: Arial, Tahoma, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+
+        .card {
+            background: rgba(255, 255, 255, 0.97);
+            border-radius: 35px;
+            box-shadow:
+                0 15px 45px rgba(0, 0, 0, 0.35);
+            width: 100%;
+            min-height: calc(100vh - 60px);
+            margin: auto;
+            padding: 60px 35px;
+            border: 1px solid #555555;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* วงกลมตกแต่ง */
+        .card::before {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            background: #eeeeee;
+            border-radius: 50%;
+            top: -90px;
+            left: -60px;
+        }
+
+        .card::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: #e2e2e2;
+            border-radius: 50%;
+            bottom: -75px;
+            right: -50px;
+        }
+
+        .decoration {
+            position: relative;
+            z-index: 2;
+            font-size: 30px;
+            margin-bottom: 25px;
+            letter-spacing: 10px;
+            filter: grayscale(100%);
+        }
+
+        h1 {
+            position: relative;
+            z-index: 2;
+            color: #222222;
+            font-size: 42px;
+            line-height: 1.5;
+            margin: 0 0 35px;
+            font-weight: bold;
+        }
+
+        p {
+            position: relative;
+            z-index: 2;
+            font-size: 21px;
+            line-height: 2;
+            color: #444444;
+            margin: 18px 0;
+        }
+
+        strong {
+            color: #222222;
+        }
+
+        .line {
+            position: relative;
+            z-index: 2;
+            width: 80px;
+            height: 3px;
+            background: #555555;
+            margin: 0 auto 25px;
+        }
+
         @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            .card {
+                min-height: calc(100vh - 30px);
+                padding: 40px 20px;
+                border-radius: 25px;
+            }
+
             h1 {
-                font-size: 30px;
+                font-size: 28px;
             }
-            .hero p {
-                font-size: 16px;
+
+            p {
+                font-size: 17px;
             }
-            .cards {
-                grid-template-columns: 1fr;
-            }
-            section {
-                padding: 55px 20px;
-            }
-            nav a {
-                margin: 0 6px;
-                font-size: 12px;
+
+            .decoration {
+                font-size: 25px;
             }
         }
     </style>
 </head>
+
 <body>
-    <!-- เมนูด้านบน -->
-    <nav>
-        <a href="#about">เกี่ยวกับฉัน</a>
-        <a href="#education">การศึกษา</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#goal">เป้าหมาย</a>
-    </nav>
-    <!-- หน้าแนะนำตัว -->
-    <div class="hero" id="about">
-        <div class="hero-content">
-            <div class="profile-icon">
-                👨‍🎓
-            </div>
-            <div class="small-title">
-                PORTFOLIO
-            </div>
-            <h1>
+
+    <div class="card">
+
+        <div class="decoration">
+            ☁️ 🙌🏻🙌🏻
+        </div>
+
+        <h1>
+            ยินดีต้อนรับสู่โปรไฟล์ของผม
+        </h1>
+
+        <div class="line"></div>
+
+        <p>
+            สวัสดีครับ! ผมชื่อ
+            <strong>
                 นายศักรนันทน์ คำทอง
-            </h1>
-            <div class="line"></div>
-            <p>
-                สวัสดีครับ ยินดีต้อนรับสู่แฟ้มสะสมผลงานของผม
-            </p>
-            <p>
-                นักเรียนชั้นมัธยมศึกษาปีที่ 6
-            </p>
-        </div>
+            </strong>
+        </p>
+
+        <p>
+            📍ขณะนี้กำลังศึกษาชั้นมัธยมศึกษาปีที่ 6
+            แผนการเรียน เตรียมวิศวกรรมศาสตร์👷‍♂️
+        </p>
+
+        <p>
+            🎯เป้าหมายในชีวิต วิศวกรอุตสาหกรรม
+        </p>
+
     </div>
-    <!-- ข้อมูลส่วนตัว -->
-    <section id="education">
-        <div class="section-title">
-            <h2>เกี่ยวกับฉัน</h2>
-            <p>ABOUT ME</p>
-        </div>
-        <div class="cards">
-            <div class="card">
-                <h3>👤 ข้อมูลส่วนตัว</h3>
-                <p>
-                    ชื่อ: นายศักรนันทน์ คำทอง<br>
-                    ระดับชั้น: มัธยมศึกษาปีที่ 6
-                </p>
-            </div>
-            <div class="card">
-                <h3>🎓 แผนการเรียน</h3>
-                <p>
-                    แผนการเรียน<br>
-                    เตรียมวิศวกรรมศาสตร์
-                </p>
-            </div>
-        </div>
-    </section>
-    <!-- การศึกษา -->
-    <section>
-        <div class="section-title">
-            <h2>ประวัติการศึกษา</h2>
-            <p>EDUCATION</p>
-        </div>
-        <div class="education">
-            <h3>ระดับมัธยมศึกษาตอนปลาย</h3>
-            <p>กำลังศึกษาชั้นมัธยมศึกษาปีที่ 6</p>
-            <p>แผนการเรียนเตรียมวิศวกรรมศาสตร์</p>
-        </div>
-        <div class="education">
-            <h3>ความสนใจด้านการเรียน</h3>
-            <p>วิทยาศาสตร์ เทคโนโลยี และการพัฒนาความรู้</p>
-        </div>
-    </section>
-    <!-- แฟ้มสะสมผลงาน -->
-    <section id="portfolio">
-        <div class="section-title">
-            <h2>แฟ้มสะสมผลงาน</h2>
-            <p>MY PORTFOLIO</p>
-        </div>
-        <div class="work">
-            <div class="work-icon">📁</div>
-            <h3>ผลงานและกิจกรรม</h3>
-            <p>
-                พื้นที่สำหรับใส่รูปภาพผลงาน<br>
-                กิจกรรม เกียรติบัตร และประสบการณ์ต่าง ๆ
-            </p>
-        </div>
-    </section>
-    <!-- เป้าหมาย -->
-    <section id="goal">
-        <div class="section-title">
-            <h2>เป้าหมายในชีวิต</h2>
-            <p>MY GOAL</p>
-        </div>
-        <div class="goal">
-            <h3>คุณครูวิทยาศาสตร์</h3>
-            <p>
-                มุ่งมั่นพัฒนาความรู้และทักษะด้านวิทยาศาสตร์
-                เพื่อก้าวไปสู่การเป็นคุณครูวิทยาศาสตร์ในอนาคต
-            </p>
-        </div>
-    </section>
-    <footer>
-        © 2026 นายศักรนันทน์ คำทอง | Portfolio
-    </footer>
+
 </body>
 </html>
