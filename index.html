@@ -1,32 +1,365 @@
-<!-- นี่คือโครงสร้างหน้าเว็บทังหมด ้ -->
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<title>หน้าแนะน;าตัวของฉัน</title>
-<style>
-body {
-background-color: #3366FF; color: #33FF00;
-text-align: center; padding: 50px;
+    <meta charset="UTF-8">
 
-}
-.card {
-background: white; border-radius: 50px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-max-width: 500px; margin: 0 auto; padding: 30px;
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-}
-h1 { color: #2c3e50; }
-p { font-size: 18px; line-height: 1.6; }
-</style>
+    <meta name="description"
+          content="Sakranan Khamthong — Engineering Portfolio">
+
+    <title>Sakranan Khamthong | Engineering Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<div class="card">
-<h1>ยินดีต้อนรับสู่โปรไฟล์ของผม </h1>
-<p>สวัสดีครับ! ผมชื่อ <strong>ศักรนันทน์ คำทอง (Sakkranan)</strong></p>
-<p>ขณะนี้กำลังศึกษา/สนใจด้าน Industrial Engineering</p>
-<p>นี่คือเว็บไซต์แรกของผมที่โฮสต์บน GitHub Pages!</p>
-  <a href="portfolio.html" style="display:inline-block; background:#3498db; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; margin-top:15px;">👉 ดูแฟ้มสะสมงานของผม</a>
-</div>
-</body>
-</html>
+
+    <!-- =========================================
+         BACKGROUND GRID
+    ========================================== -->
+
+    <div class="background-grid"></div>
+
+
+    <!-- =========================================
+         TOP NAVIGATION
+    ========================================== -->
+
+    <header class="topbar">
+
+        <div class="brand">
+            <span class="brand-mark">SK.</span>
+            <span class="brand-line"></span>
+            <span class="brand-text">ENGINEERING PORTFOLIO</span>
+        </div>
+
+        <div class="top-status">
+            <span class="status-dot"></span>
+            PORTFOLIO 2026
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
+         SLIDE NAVIGATION
+    ========================================== -->
+
+    <nav class="slide-nav">
+
+        <button class="nav-number active"
+                data-slide="0">
+            01
+        </button>
+
+        <button class="nav-number"
+                data-slide="1">
+            02
+        </button>
+
+        <button class="nav-number"
+                data-slide="2">
+            03
+        </button>
+
+        <button class="nav-number"
+                data-slide="3">
+            04
+        </button>
+
+        <button class="nav-number"
+                data-slide="4">
+            05
+        </button>
+
+    </nav>
+
+
+    <!-- =========================================
+         MAIN SLIDES
+    ========================================== -->
+
+    <main id="portfolio">
+
+
+        <!-- =====================================
+             SLIDE 01 — PROFILE
+        ====================================== -->
+
+        <section class="slide active"
+                 id="slide-1"
+                 data-index="0">
+
+            <div class="slide-inner profile-slide">
+
+                <div class="slide-label">
+                    <span>01</span>
+                    <span>PROFILE</span>
+                </div>
+
+
+                <div class="profile-layout">
+
+
+                    <!-- PROFILE PHOTO -->
+
+                    <div class="profile-photo-wrapper">
+
+                        <div class="photo-frame">
+
+                            <img
+                                src="assets/images/profile.jpg"
+                                alt="Sakranan Khamthong">
+
+                            <div class="photo-corner top-left"></div>
+                            <div class="photo-corner top-right"></div>
+                            <div class="photo-corner bottom-left"></div>
+                            <div class="photo-corner bottom-right"></div>
+
+                        </div>
+
+                        <div class="photo-caption">
+                            ENGINEERING ASPIRANT
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROFILE INFORMATION -->
+
+                    <div class="profile-content">
+
+                        <div class="small-kicker">
+                            HELLO, I'M
+                        </div>
+
+                        <h1>
+                            ศักรนันทน์<br>
+                            <span>คำทอง</span>
+                        </h1>
+
+                        <div class="nickname">
+                            SON
+                        </div>
+
+                        <div class="profile-divider"></div>
+
+
+                        <div class="profile-info-grid">
+
+                            <div class="info-item">
+                                <span class="info-label">
+                                    SCHOOL
+                                </span>
+
+                                <span class="info-value">
+                                    โรงเรียนบ้านบึง<br>
+                                    “อุตสาหกรรมนุเคราะห์”
+                                </span>
+                            </div>
+
+
+                            <div class="info-item">
+                                <span class="info-label">
+                                    PROGRAM
+                                </span>
+
+                                <span class="info-value">
+                                    เตรียมวิศวะ
+                                </span>
+                            </div>
+
+
+                            <div class="info-item">
+                                <span class="info-label">
+                                    INTERESTED MAJOR
+                                </span>
+
+                                <span class="info-value">
+                                    วิศวกรรมอุตสาหการ
+                                </span>
+                            </div>
+
+
+                            <div class="info-item">
+                                <span class="info-label">
+                                    TARGET UNIVERSITY
+                                </span>
+
+                                <span class="info-value">
+                                    มหาวิทยาลัยเกษตรศาสตร์<br>
+                                    บางเขน
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="hero-tagline">
+                            <span>BUILD SYSTEMS.</span>
+                            <span>SOLVE PROBLEMS.</span>
+                            <span>CREATE IMPACT.</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             SLIDE 02 — ABOUT ME
+        ====================================== -->
+
+        <section class="slide"
+                 id="slide-2"
+                 data-index="1">
+
+            <div class="slide-inner">
+
+                <div class="slide-heading">
+
+                    <div class="slide-label">
+                        <span>02</span>
+                        <span>ABOUT ME</span>
+                    </div>
+
+                    <h2>
+                        THINK IN SYSTEMS.<br>
+                        <span>LEARN THROUGH DATA.</span>
+                    </h2>
+
+                    <p class="heading-description">
+                        ผมสนใจการทำความเข้าใจระบบ
+                        การจัดระเบียบข้อมูล และการมองหาวิธี
+                        ที่สามารถทำให้สิ่งต่าง ๆ ทำงานได้ดีขึ้น
+                    </p>
+
+                </div>
+
+
+                <div class="interest-grid">
+
+
+                    <article class="interest-card">
+
+                        <div class="card-number">
+                            01
+                        </div>
+
+                        <div class="card-icon">
+                            ₿
+                        </div>
+
+                        <h3>
+                            Finance & Investment
+                        </h3>
+
+                        <p>
+                            สนใจด้านการเงิน การลงทุน
+                            และการวิเคราะห์ข้อมูลเพื่อใช้
+                            ประกอบการตัดสินใจ
+                        </p>
+
+                    </article>
+
+
+                    <article class="interest-card featured">
+
+                        <div class="card-number">
+                            02
+                        </div>
+
+                        <div class="card-icon">
+                            ∑
+                        </div>
+
+                        <h3>
+                            Optimization
+                        </h3>
+
+                        <p>
+                            สนใจการหาวิธีที่เหมาะสมที่สุด
+                            ภายใต้ข้อจำกัดต่าง ๆ เช่น
+                            การลดต้นทุนและเพิ่มประสิทธิภาพ
+                        </p>
+
+                    </article>
+
+
+                    <article class="interest-card">
+
+                        <div class="card-number">
+                            03
+                        </div>
+
+                        <div class="card-icon">
+                            ◫
+                        </div>
+
+                        <h3>
+                            Data Analysis
+                        </h3>
+
+                        <p>
+                            ชอบข้อมูล เพราะข้อมูลช่วยให้เรา
+                            มองเห็นรูปแบบของปัญหา
+                            และสามารถนำไปใช้ในการตัดสินใจ
+                        </p>
+
+                    </article>
+
+
+                    <article class="interest-card">
+
+                        <div class="card-number">
+                            04
+                        </div>
+
+                        <div class="card-icon">
+                            ↗
+                        </div>
+
+                        <h3>
+                            Persistence
+                        </h3>
+
+                        <p>
+                            เมื่อสนใจเรื่องใด ผมจะพยายาม
+                            เรียนรู้และทำต่อจนกว่าจะเข้าใจ
+                            หรือสามารถทำสิ่งนั้นให้สำเร็จ
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+
+                <div class="about-bottom">
+
+                    <div class="about-statement">
+                        <span class="quote-mark">“</span>
+
+                        <p>
+                            ผมชอบการคิดอย่างเป็นระบบ
+                            และมองหาวิธีที่จะทำให้
+                            สิ่งต่าง ๆ มีประสิทธิภาพมากขึ้น
+                        </p>
+
+                    </div>
+
+                    <div class="skill-line">
+
+                        <span>DATA</span>
+                        <span>•</span>
+                        <span>SYSTEM</span>
+                        <span>•</span>
+                        <span>OPTIMIZATION</span>
+             
