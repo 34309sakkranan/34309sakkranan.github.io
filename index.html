@@ -13,101 +13,175 @@
         body {
             margin: 0;
             min-height: 100vh;
+            padding: 25px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Tahoma, sans-serif;
+            text-align: center;
+            color: #263238;
             background: linear-gradient(
                 135deg,
                 #dff6ff,
                 #bde7f7,
                 #d5f5e8
             );
-            color: #263238;
-            text-align: center;
-            padding: 25px 15px;
-            font-family: Arial, Tahoma, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.97);
-            border-radius: 28px;
-            box-shadow:
-                0 18px 45px rgba(35, 90, 120, 0.18);
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
             width: 100%;
             min-height: calc(100vh - 50px);
-            margin: auto;
-            padding: 55px 35px;
-            border: 2px solid #c7eaf5;
-            position: relative;
-            overflow: hidden;
+            padding: 45px 25px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            border: 2px solid #c7eaf5;
+            border-radius: 30px;
+            background: rgba(255,255,255,.97);
+            box-shadow: 0 18px 45px rgba(35,90,120,.18);
         }
 
-        /* วงกลมตกแต่ง */
-        .card::before {
-            content: "";
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            background: #d5f3ff;
-            border-radius: 50%;
-            top: -100px;
-            left: -70px;
-        }
-
+        .card::before,
         .card::after {
             content: "";
             position: absolute;
-            width: 170px;
-            height: 170px;
-            background: #d9f5e8;
+            z-index: -1;
             border-radius: 50%;
-            bottom: -85px;
-            right: -55px;
+        }
+
+        .card::before {
+            width: 220px;
+            height: 220px;
+            top: -110px;
+            left: -80px;
+            background: #d5f3ff;
+        }
+
+        .card::after {
+            width: 190px;
+            height: 190px;
+            right: -60px;
+            bottom: -95px;
+            background: #d9f5e8;
         }
 
         .decoration {
             position: relative;
             z-index: 2;
-            font-size: 30px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
+            font-size: 28px;
             letter-spacing: 8px;
         }
 
-        h1 {
+        /* กรอบรูปโปรไฟล์ */
+        .profile-frame {
             position: relative;
             z-index: 2;
-            color: #1565c0;
-            font-size: 42px;
-            line-height: 1.5;
-            margin: 0 0 30px;
+            width: 190px;
+            height: 190px;
+            padding: 8px;
+            margin-bottom: 25px;
+            border-radius: 50%;
+            background: linear-gradient(
+                135deg,
+                #29b6f6,
+                #1565c0,
+                #26a69a
+            );
+            box-shadow: 0 10px 25px rgba(21,101,192,.25);
+        }
+
+        .profile-frame img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 5px solid white;
+            border-radius: 50%;
+        }
+
+        /* กรอบข้อความ */
+        .intro-box {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 700px;
+            padding: 25px 30px;
+            border: 2px solid #c7eaf5;
+            border-radius: 22px;
+            background: #f8fdff;
+            box-shadow: 0 8px 20px rgba(35,90,120,.08);
+        }
+
+        .small-title {
+            margin-bottom: 12px;
+            color: #00897b;
+            font-size: 13px;
             font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        h1 {
+            margin: 0 0 15px;
+            color: #1565c0;
+            font-size: 38px;
+            line-height: 1.5;
+        }
+
+        .line {
+            width: 70px;
+            height: 4px;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+            background: #29b6f6;
         }
 
         p {
-            position: relative;
-            z-index: 2;
-            font-size: 21px;
-            line-height: 2;
+            margin: 12px 0;
             color: #455a64;
-            margin: 15px 0;
+            font-size: 19px;
+            line-height: 1.9;
         }
 
         strong {
             color: #00897b;
         }
 
-        .line {
+        /* กรอบข้อมูล */
+        .info-box {
             position: relative;
             z-index: 2;
-            width: 80px;
-            height: 4px;
-            background: #29b6f6;
-            border-radius: 10px;
-            margin: 0 auto 25px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            width: 100%;
+            max-width: 700px;
+            margin-top: 20px;
+        }
+
+        .info-card {
+            padding: 18px 15px;
+            border: 2px solid #d5edf5;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(35,90,120,.06);
+        }
+
+        .info-card h3 {
+            margin: 0 0 8px;
+            color: #1565c0;
+            font-size: 17px;
+        }
+
+        .info-card p {
+            margin: 0;
+            color: #607d8b;
+            font-size: 16px;
+            line-height: 1.6;
         }
 
         /* ปุ่มเข้า Portfolio */
@@ -115,17 +189,16 @@
             position: relative;
             z-index: 3;
             display: inline-block;
-            margin-top: 30px;
+            margin-top: 25px;
             padding: 15px 32px;
+            border-radius: 12px;
             background: #1565c0;
             color: white;
             text-decoration: none;
             font-size: 18px;
             font-weight: bold;
-            border-radius: 12px;
-            box-shadow:
-                0 8px 20px rgba(21, 101, 192, 0.25);
-            transition: 0.25s;
+            box-shadow: 0 8px 20px rgba(21,101,192,.25);
+            transition: .25s;
         }
 
         .btn:hover {
@@ -140,8 +213,13 @@
 
             .card {
                 min-height: calc(100vh - 30px);
-                padding: 40px 20px;
-                border-radius: 24px;
+                padding: 35px 18px;
+                border-radius: 25px;
+            }
+
+            .profile-frame {
+                width: 150px;
+                height: 150px;
             }
 
             h1 {
@@ -152,13 +230,17 @@
                 font-size: 17px;
             }
 
-            .decoration {
-                font-size: 25px;
+            .intro-box {
+                padding: 22px 18px;
+            }
+
+            .info-box {
+                grid-template-columns: 1fr;
             }
 
             .btn {
-                font-size: 16px;
                 padding: 13px 25px;
+                font-size: 16px;
             }
         }
     </style>
@@ -166,39 +248,63 @@
 
 <body>
 
-    <div class="card">
+    <main class="card">
 
         <div class="decoration">
             ⚡ 🧢 ✦
         </div>
 
-        <h1>
-            👋 ยินดีต้อนรับสู่โปรไฟล์ของฉัน
-        </h1>
+        <!-- รูปโปรไฟล์ -->
+        <!-- เปลี่ยน profile.jpg เป็นชื่อไฟล์รูปจริงของนายศักรนันทน์ -->
+        <div class="profile-frame">
+            <img src="profile.jpg" alt="รูปโปรไฟล์ นายศักรนันทน์ คำทอง">
+        </div>
 
-        <div class="line"></div>
+        <!-- กรอบข้อความแนะนำตัว -->
+        <section class="intro-box">
 
-        <p>
-            สวัสดีครับ! ผมชื่อ
-            <strong>
-                นายศักรนันทน์ คำทอง
-            </strong>
-        </p>
+            <div class="small-title">
+                PORTFOLIO
+            </div>
 
-        <p>
-            📍 ขณะนี้กำลังศึกษาชั้นมัธยมศึกษาปีที่ 6
-            แผนการเรียน เตรียมวิศวกรรมศาสตร์
-        </p>
+            <h1>
+                👋 ยินดีต้อนรับสู่โปรไฟล์ของผม
+            </h1>
 
-        <p>
-            🎯 เป้าหมายในชีวิต วิศกรอุตสาหการ
-        </p>
+            <div class="line"></div>
 
+            <p>
+                สวัสดีครับ! ผมชื่อ
+                <strong>นายศักรนันทน์ คำทอง</strong>
+            </p>
+
+            <p>
+                ขณะนี้กำลังศึกษาชั้นมัธยมศึกษาปีที่ 6
+            </p>
+
+        </section>
+
+        <!-- กรอบข้อมูล -->
+        <section class="info-box">
+
+            <div class="info-card">
+                <h3>🎓 แผนการเรียน</h3>
+                <p>เตรียมวิศวกรรมศาสตร์</p>
+            </div>
+
+            <div class="info-card">
+                <h3>🎯 เป้าหมายในชีวิต</h3>
+                <p>วิศวกรอุตสาหการ</p>
+            </div>
+
+        </section>
+
+        <!-- ปุ่มเข้า Portfolio -->
         <a href="portfolio.html" class="btn">
             📁 ดูแฟ้มสะสมผลงานของฉัน →
         </a>
 
-    </div>
+    </main>
 
 </body>
 </html>
