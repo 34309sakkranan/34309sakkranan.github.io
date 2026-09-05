@@ -26,7 +26,7 @@ body {
 }
 
 /* ========================= */
-/* เมนูด้านบน */
+/* เมนูด้านบน แนวนอน */
 /* ========================= */
 
 .top-menu {
@@ -41,11 +41,11 @@ body {
     padding: 15px 30px;
 
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     gap: 12px;
 
-    background: rgba(255, 255, 255, 0.97);
+    background: rgba(255, 255, 255, 0.98);
     border-bottom: 2px solid #c7eaf5;
     box-shadow: 0 4px 15px rgba(35, 90, 120, 0.08);
 }
@@ -88,7 +88,7 @@ body {
 
 .page-box {
     width: 100%;
-    max-width: 1250px;
+    max-width: 1350px;
     min-height: calc(100vh - 155px);
 
     padding: 45px;
@@ -138,10 +138,10 @@ body {
 
 .preface-content {
     width: 100%;
-    max-width: 950px;
+    max-width: 1100px;
 
     margin: 0 auto;
-    padding: 35px 45px;
+    padding: 35px 50px;
 
     background: #f4fcff;
     border: 2px solid #d5edf5;
@@ -175,17 +175,17 @@ body {
     width: 100%;
 
     display: grid;
-    grid-template-columns: 300px minmax(0, 1fr);
+    grid-template-columns: 350px minmax(0, 1fr);
 
     align-items: center;
-    gap: 60px;
+    gap: 70px;
 }
 
 .profile-frame {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: 350px;
 
-    padding: 9px;
+    padding: 10px;
     border-radius: 50%;
 
     background: linear-gradient(
@@ -220,7 +220,8 @@ body {
     font-size: 30px;
 }
 
-/* ข้อมูลคนละบรรทัด */
+/* ข้อมูลแต่ละหัวข้ออยู่คนละบรรทัด */
+
 .info-box {
     width: 100%;
     padding: 25px 30px;
@@ -234,7 +235,7 @@ body {
     width: 100%;
 
     display: grid;
-    grid-template-columns: 190px minmax(0, 1fr);
+    grid-template-columns: 200px minmax(0, 1fr);
 
     gap: 20px;
     align-items: start;
@@ -275,7 +276,7 @@ body {
 }
 
 .future-card {
-    min-height: 330px;
+    min-height: 350px;
     padding: 35px;
 
     background: #f4fcff;
@@ -299,7 +300,7 @@ body {
 }
 
 .future-card p {
-    margin: 0;
+    margin: 12px 0;
     color: #455a64;
     font-size: 19px;
     line-height: 2;
@@ -315,7 +316,7 @@ body {
 
 .work-intro {
     margin: 0 auto 30px;
-    max-width: 850px;
+    max-width: 950px;
 
     color: #455a64;
     font-size: 19px;
@@ -332,7 +333,7 @@ body {
 }
 
 .work-card {
-    min-height: 350px;
+    min-height: 570px;
     padding: 20px;
 
     background: #f4fcff;
@@ -350,9 +351,10 @@ body {
 }
 
 /* ช่องใส่รูปผลงาน */
+
 .work-image {
     width: 100%;
-    height: 170px;
+    height: 230px;
 
     margin-bottom: 20px;
 
@@ -360,11 +362,9 @@ body {
     justify-content: center;
     align-items: center;
 
-    color: #78909c;
     background: #eaf9ff;
-    border: 2px dashed #90caf9;
+    border: 2px solid #c7eaf5;
     border-radius: 15px;
-    font-size: 17px;
     overflow: hidden;
 }
 
@@ -375,16 +375,35 @@ body {
 }
 
 .work-card h3 {
-    margin: 0 0 12px;
+    margin: 0 0 15px;
     color: #1565c0;
-    font-size: 22px;
+    font-size: 21px;
+    line-height: 1.5;
 }
 
 .work-card p {
     margin: 0;
     color: #607d8b;
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.skill-title {
+    margin-top: 15px !important;
+    margin-bottom: 5px !important;
+    color: #00897b !important;
+    font-weight: bold;
+    text-align: left !important;
+}
+
+.skill-list {
+    margin: 0;
+    padding-left: 20px;
+    color: #607d8b;
+    font-size: 15px;
+    line-height: 1.8;
+    text-align: left;
 }
 
 /* ========================= */
@@ -402,7 +421,7 @@ footer {
 /* หน้าจอขนาดกลาง */
 /* ========================= */
 
-@media (max-width: 950px) {
+@media (max-width: 1100px) {
 
     .top-menu {
         padding: 12px 15px;
@@ -423,17 +442,17 @@ footer {
     }
 
     .about-layout {
-        grid-template-columns: 230px minmax(0, 1fr);
-        gap: 30px;
+        grid-template-columns: 250px minmax(0, 1fr);
+        gap: 35px;
     }
 
     .profile-frame {
-        width: 230px;
-        height: 230px;
+        width: 250px;
+        height: 250px;
     }
 
     .info-row {
-        grid-template-columns: 145px minmax(0, 1fr);
+        grid-template-columns: 150px minmax(0, 1fr);
         gap: 12px;
     }
 
@@ -455,7 +474,7 @@ footer {
 
     .top-menu {
         padding: 10px 8px;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 5px;
         overflow-x: auto;
         white-space: nowrap;
@@ -504,8 +523,8 @@ footer {
     }
 
     .profile-frame {
-        width: 200px;
-        height: 200px;
+        width: 220px;
+        height: 220px;
     }
 
     .about-text {
@@ -560,7 +579,11 @@ footer {
     }
 
     .work-card {
-        min-height: 320px;
+        min-height: auto;
+    }
+
+    .work-image {
+        height: 230px;
     }
 }
 </style>
@@ -612,19 +635,27 @@ footer {
                 ข้าพเจ้ามีความสนใจด้านวิทยาศาสตร์ คณิตศาสตร์
                 เทคโนโลยี และกระบวนการทำงานต่าง ๆ
                 โดยเฉพาะการวางแผน การแก้ไขปัญหา
-                และการปรับปรุงกระบวนการให้มีประสิทธิภาพ
-                จึงมีความตั้งใจที่จะศึกษาต่อใน
-                <strong>คณะวิศวกรรมศาสตร์ สาขาวิศวกรรมอุตสาหการ</strong>
-                เพื่อพัฒนาความรู้และทักษะที่จำเป็น
-                สำหรับการประกอบอาชีพวิศวกรอุตสาหการในอนาคต
+                การจัดการทรัพยากร และการปรับปรุงกระบวนการ
+                ให้สามารถทำงานได้อย่างมีประสิทธิภาพ
+            </p>
+
+            <p>
+                ด้วยเหตุนี้ ข้าพเจ้าจึงมีความตั้งใจที่จะศึกษาต่อ
+                ในคณะวิศวกรรมศาสตร์
+                สาขาวิศวกรรมอุตสาหการ
+                เพื่อพัฒนาความรู้ด้านการวิเคราะห์ระบบ
+                การวางแผนการผลิต การจัดการคุณภาพ
+                และการปรับปรุงกระบวนการทำงาน
+                ซึ่งเป็นความรู้สำคัญสำหรับการประกอบอาชีพ
+                วิศวกรอุตสาหการในอนาคต
             </p>
 
             <p>
                 ข้าพเจ้าหวังเป็นอย่างยิ่งว่าแฟ้มสะสมผลงานเล่มนี้
                 จะช่วยแสดงให้เห็นถึงความมุ่งมั่น ความสามารถ
-                และความพร้อมในการศึกษาต่อ
+                ความรับผิดชอบ และความพร้อมในการศึกษาต่อ
                 รวมถึงเป็นส่วนหนึ่งในการก้าวไปสู่เป้าหมาย
-                ที่ตั้งใจไว้
+                ที่ข้าพเจ้าตั้งใจไว้
             </p>
 
             <p>
@@ -668,7 +699,7 @@ footer {
 
         <div class="about-layout">
 
-            <!-- รูปเดิม -->
+            <!-- รูปเดิมจากหน้าแรก -->
             <div class="profile-frame">
                 <img
                     src="IMG_1529.jpeg"
@@ -814,14 +845,16 @@ footer {
 
                 <p>
                     เพื่อพัฒนาความรู้ด้านการวางแผน
-                    การจัดการ และการปรับปรุงกระบวนการ
+                    การจัดการ การวิเคราะห์ข้อมูล
+                    และการปรับปรุงกระบวนการทำงาน
                     ให้มีประสิทธิภาพ
                 </p>
 
                 <p>
                     และนำความรู้ไปประกอบอาชีพ
                     <strong>วิศวกรอุตสาหการ</strong>
-                    ในอนาคต
+                    ที่มีความรับผิดชอบ
+                    และสามารถพัฒนาองค์กรให้ก้าวหน้าได้
                 </p>
 
             </div>
@@ -855,56 +888,131 @@ footer {
 
         <p class="work-intro">
             รวบรวมผลงานและกิจกรรมที่แสดงถึงความสนใจ
-            ความสามารถ และการพัฒนาตนเองของข้าพเจ้า
+            ความสามารถ ความรับผิดชอบ
+            และการพัฒนาทักษะของข้าพเจ้า
         </p>
 
         <div class="work-grid">
 
+            <!-- ========================= -->
             <!-- ผลงานที่ 1 -->
+            <!-- ========================= -->
+
             <div class="work-card">
 
                 <div class="work-image">
-                    📷 ใส่รูปผลงานที่ 1
+                    <img
+                        src="9234319A-DC63-40C8-BAF4-268930D2E6AD.jpeg"
+                        alt="Mini Startup Camp Non-EE"
+                    >
                 </div>
 
-                <h3>ผลงานด้านวิทยาศาสตร์</h3>
+                <h3>
+                    เข้าร่วม WORKSHOP
+                    Mini Startup Camp [Non-EE]
+                </h3>
 
                 <p>
-                    โครงงานหรือกิจกรรมด้านวิทยาศาสตร์
-                    ที่เคยจัดทำหรือเข้าร่วม
+                    ได้เข้าร่วมกิจกรรม Mini Startup Camp [Non-EE]
+                    ในงาน K-ENGINEERING WORLD TOUR AND
+                    COMPETENCY CHALLENGE 2026
+                    ของคณะวิศวกรรมศาสตร์
+                    สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
                 </p>
+
+                <p class="skill-title">
+                    ทักษะที่ได้รับ
+                </p>
+
+                <ul class="skill-list">
+                    <li>ทักษะการคิดสร้างสรรค์</li>
+                    <li>ทักษะการวางแผนธุรกิจ</li>
+                    <li>ทักษะการทำงานเป็นทีม</li>
+                    <li>ทักษะการแก้ไขปัญหา</li>
+                    <li>ทักษะการนำเสนอความคิดเห็น</li>
+                </ul>
 
             </div>
 
+
+            <!-- ========================= -->
             <!-- ผลงานที่ 2 -->
+            <!-- ========================= -->
+
             <div class="work-card">
 
                 <div class="work-image">
-                    📷 ใส่รูปผลงานที่ 2
+                    <img
+                        src="210C3E94-6873-48B6-96B9-583C473BB7A2.jpeg"
+                        alt="กิจกรรมสัปดาห์วิทยาศาสตร์และเทคโนโลยี"
+                    >
                 </div>
 
-                <h3>ผลงานด้านเทคโนโลยี</h3>
+                <h3>
+                    เป็นวิทยากรจัดแสดงนิทรรศการ
+                    วิทยาศาสตร์และเทคโนโลยี
+                </h3>
 
                 <p>
-                    ผลงานการสร้างเว็บไซต์
-                    หรือกิจกรรมที่เกี่ยวข้องกับเทคโนโลยี
+                    ได้รับเกียรติบัตรจากการเป็นวิทยากร
+                    จัดแสดงนิทรรศการวิทยาศาสตร์และเทคโนโลยี
+                    เนื่องในงานวันวิทยาศาสตร์แห่งชาติ
+                    ประจำปีการศึกษา 2569
+                    ณ โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”
                 </p>
+
+                <p class="skill-title">
+                    ทักษะที่ได้รับ
+                </p>
+
+                <ul class="skill-list">
+                    <li>ทักษะการสื่อสาร</li>
+                    <li>ทักษะการถ่ายทอดความรู้</li>
+                    <li>ทักษะการพูดต่อหน้าชุมชน</li>
+                    <li>ทักษะการทำงานร่วมกับผู้อื่น</li>
+                    <li>ทักษะความรับผิดชอบ</li>
+                </ul>
 
             </div>
 
+
+            <!-- ========================= -->
             <!-- ผลงานที่ 3 -->
+            <!-- ========================= -->
+
             <div class="work-card">
 
                 <div class="work-image">
-                    📷 ใส่รูปผลงานที่ 3
+                    <img
+                        src="74AEBD01-89FA-48C3-A213-C8168B6F1146.jpeg"
+                        alt="BB Young Investor Challenge 2026"
+                    >
                 </div>
 
-                <h3>กิจกรรมและประสบการณ์</h3>
+                <h3>
+                    รางวัลรองชนะเลิศอันดับ 1
+                    การแข่งขัน BB Young Investor Challenge 2026
+                </h3>
 
                 <p>
-                    กิจกรรมการเรียนรู้ กิจกรรมจิตอาสา
-                    หรือประสบการณ์ที่ภาคภูมิใจ
+                    ได้รับรางวัลรองชนะเลิศอันดับ 1
+                    จากการแข่งขัน BB Young Investor Challenge 2026
+                    เนื่องในวันสัปดาห์สังคมศึกษา
+                    ประจำปีการศึกษา 2569
+                    ณ โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”
                 </p>
+
+                <p class="skill-title">
+                    ทักษะที่ได้รับ
+                </p>
+
+                <ul class="skill-list">
+                    <li>ทักษะการวางแผนทางการเงิน</li>
+                    <li>ทักษะการคิดวิเคราะห์</li>
+                    <li>ทักษะการตัดสินใจ</li>
+                    <li>ทักษะการบริหารจัดการ</li>
+                    <li>ทักษะการทำงานเป็นทีม</li>
+                </ul>
 
             </div>
 
