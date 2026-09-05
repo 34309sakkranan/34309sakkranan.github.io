@@ -1,0 +1,895 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family:
+        "Noto Sans Thai",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: #07111f;
+    color: #edf4fa;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   VARIABLES
+===================================================== */
+
+:root {
+
+    --bg: #07111f;
+
+    --panel: #0c1828;
+
+    --panel-light: #101f32;
+
+    --text: #edf4fa;
+
+    --muted: #8d9aaa;
+
+    --line: rgba(255,255,255,0.10);
+
+    --accent: #69b7ff;
+
+    --accent-light: #b9ddff;
+
+    --gold: #d6b36a;
+
+    --max-width: 1380px;
+
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.background-grid {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+
+}
+
+
+.background-grid::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            rgba(60,140,220,0.10),
+            transparent 35%
+        );
+
+}
+
+
+/* =====================================================
+   TOP BAR
+===================================================== */
+
+.topbar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 72px;
+
+    padding:
+        0 clamp(24px, 5vw, 80px);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    z-index: 20;
+
+    border-bottom: 1px solid var(--line);
+
+    background:
+        rgba(7,17,31,0.78);
+
+    backdrop-filter: blur(12px);
+
+}
+
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+.brand-mark {
+
+    font-size: 21px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+}
+
+
+.brand-line {
+
+    width: 35px;
+
+    height: 1px;
+
+    background: var(--accent);
+
+}
+
+
+.brand-text {
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    letter-spacing: 0.22em;
+
+}
+
+
+.top-status {
+
+    font-size: 10px;
+
+    color: var(--muted);
+
+    letter-spacing: 0.15em;
+
+}
+
+
+.status-dot {
+
+    display: inline-block;
+
+    width: 7px;
+
+    height: 7px;
+
+    margin-right: 7px;
+
+    border-radius: 50%;
+
+    background: #69d18b;
+
+}
+
+
+/* =====================================================
+   SLIDE NAV
+===================================================== */
+
+.slide-nav {
+
+    position: fixed;
+
+    right: 30px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 20;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+
+}
+
+
+.nav-number {
+
+    border: 0;
+
+    background: transparent;
+
+    color: #596779;
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+    letter-spacing: 0.12em;
+
+    padding: 5px;
+
+    transition: 0.25s ease;
+
+}
+
+
+.nav-number:hover {
+
+    color: white;
+
+}
+
+
+.nav-number.active {
+
+    color: var(--accent);
+
+}
+
+
+.nav-number.active::before {
+
+    content: "";
+
+    display: inline-block;
+
+    width: 18px;
+
+    height: 1px;
+
+    background: var(--accent);
+
+    vertical-align: middle;
+
+    margin-right: 6px;
+
+}
+
+
+/* =====================================================
+   SLIDE SYSTEM
+===================================================== */
+
+.slide {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateX(35px);
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease,
+        visibility 0.45s;
+
+}
+
+
+.slide.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateX(0);
+
+}
+
+
+.slide-inner {
+
+    width: min(
+        var(--max-width),
+        calc(100% - 160px)
+    );
+
+    height: 100%;
+
+    margin: auto;
+
+    padding:
+        120px 0 110px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.slide-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+
+}
+
+
+.slide-label span:first-child {
+
+    color: var(--accent);
+
+}
+
+
+/* =====================================================
+   SLIDE HEADINGS
+===================================================== */
+
+.slide-heading {
+
+    max-width: 850px;
+
+}
+
+
+.slide-heading h2 {
+
+    font-size:
+        clamp(36px, 5vw, 74px);
+
+    line-height: 0.98;
+
+    letter-spacing: -0.035em;
+
+    font-weight: 800;
+
+}
+
+
+.slide-heading h2 span {
+
+    color: var(--accent);
+
+}
+
+
+.heading-description {
+
+    max-width: 650px;
+
+    margin-top: 24px;
+
+    color: var(--muted);
+
+    line-height: 1.8;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.profile-slide {
+
+    justify-content: center;
+
+}
+
+
+.profile-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, 0.8fr)
+        minmax(500px, 1.2fr);
+
+    align-items: center;
+
+    gap: 90px;
+
+}
+
+
+.profile-photo-wrapper {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+.photo-frame {
+
+    position: relative;
+
+    width: min(360px, 100%);
+
+    aspect-ratio: 4 / 5;
+
+    background: var(--panel);
+
+    overflow: hidden;
+
+}
+
+
+.photo-frame img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.photo-frame::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 70%,
+            rgba(7,17,31,0.28)
+        );
+
+}
+
+
+.photo-corner {
+
+    position: absolute;
+
+    width: 25px;
+
+    height: 25px;
+
+    z-index: 2;
+
+}
+
+
+.photo-corner.top-left {
+
+    left: -1px;
+    top: -1px;
+
+    border-top: 2px solid var(--accent);
+    border-left: 2px solid var(--accent);
+
+}
+
+
+.photo-corner.top-right {
+
+    right: -1px;
+    top: -1px;
+
+    border-top: 2px solid var(--accent);
+    border-right: 2px solid var(--accent);
+
+}
+
+
+.photo-corner.bottom-left {
+
+    left: -1px;
+    bottom: -1px;
+
+    border-bottom: 2px solid var(--accent);
+    border-left: 2px solid var(--accent);
+
+}
+
+
+.photo-corner.bottom-right {
+
+    right: -1px;
+    bottom: -1px;
+
+    border-bottom: 2px solid var(--accent);
+    border-right: 2px solid var(--accent);
+
+}
+
+
+.photo-caption {
+
+    width: min(360px, 100%);
+
+    padding: 12px 0;
+
+    color: var(--muted);
+
+    font-size: 9px;
+
+    letter-spacing: 0.22em;
+
+    border-bottom: 1px solid var(--line);
+
+}
+
+
+.small-kicker {
+
+    color: var(--accent);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.2em;
+
+    margin-bottom: 12px;
+
+}
+
+
+.profile-content h1 {
+
+    font-size:
+        clamp(48px, 7vw, 94px);
+
+    line-height: 0.95;
+
+    letter-spacing: -0.05em;
+
+}
+
+
+.profile-content h1 span {
+
+    color: var(--accent);
+
+}
+
+
+.nickname {
+
+    margin-top: 17px;
+
+    color: var(--muted);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.3em;
+
+}
+
+
+.profile-divider {
+
+    width: 100%;
+
+    height: 1px;
+
+    background: var(--line);
+
+    margin: 28px 0;
+
+}
+
+
+.profile-info-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+
+}
+
+
+.info-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+}
+
+
+.info-label {
+
+    color: var(--muted);
+
+    font-size: 8px;
+
+    letter-spacing: 0.18em;
+
+}
+
+
+.info-value {
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+
+.hero-tagline {
+
+    margin-top: 35px;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px 18px;
+
+}
+
+
+.hero-tagline span {
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.13em;
+
+    color: var(--accent-light);
+
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.interest-grid {
+
+    margin-top: 50px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 14px;
+
+}
+
+
+.interest-card {
+
+    min-height: 250px;
+
+    padding: 25px;
+
+    background:
+        rgba(12,24,40,0.78);
+
+    border: 1px solid var(--line);
+
+    position: relative;
+
+    transition: 0.3s ease;
+
+}
+
+
+.interest-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color:
+        rgba(105,183,255,0.4);
+
+}
+
+
+.interest-card.featured {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(24,56,87,0.85),
+            rgba(12,24,40,0.85)
+        );
+
+}
+
+
+.card-number {
+
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    color: #3f4c5d;
+
+    font-size: 11px;
+
+}
+
+
+.card-icon {
+
+    color: var(--accent);
+
+    font-size: 30px;
+
+    margin-bottom: 40px;
+
+}
+
+
+.interest-card h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 12px;
+
+}
+
+
+.interest-card p {
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+}
+
+
+.about-bottom {
+
+    margin-top: auto;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+}
+
+
+.about-statement {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    max-width: 600px;
+
+}
+
+
+.quote-mark {
+
+    color: var(--accent);
+
+    font-size: 40px;
+
+    line-height: 0.8;
+
+    margin-right: 10px;
+
+}
+
+
+.about-statement p {
+
+    color: var(--muted);
+
+    line-height: 1.8;
+
+    font-size: 13px;
+
+}
+
+
+.skill-line {
+
+    color: #607084;
+
+    font-size: 9px;
+
+    letter-spacing: 0.15em;
+
+    white-space: nowrap;
+
+}
+
+
+/* =====================================================
+   INDUSTRIAL ENGINEERING
+===================================================== */
+
+.ie-content {
+
+    margin-top: 45px;
+
+    display: grid;
+
+    grid-templ
