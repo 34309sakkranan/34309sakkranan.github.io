@@ -12,49 +12,77 @@
     scroll-behavior: smooth;
 }
 
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
 body {
+    width: 100%;
+    min-height: 100%;
     margin: 0;
     font-family: Arial, Tahoma, sans-serif;
     color: #263238;
     background: linear-gradient(135deg, #dff6ff, #bde7f7, #d5f5e8);
+    overflow-x: hidden;
 }
 
-/* เมนูด้านขวาบน */
-.side-menu {
+/* ========================= */
+/* เมนูด้านบน */
+/* ========================= */
+
+.top-menu {
     position: fixed;
-    top: 25px;
-    right: 25px;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 1000;
+
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 35px;
+
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 145px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 2px solid #c7eaf5;
+    box-shadow: 0 4px 15px rgba(35, 90, 120, 0.08);
 }
 
-.side-menu a {
-    display: block;
-    padding: 12px 10px;
-    background: #1565c0;
+.top-menu a {
+    display: inline-block;
+    padding: 12px 20px;
+
     color: white;
+    background: #1565c0;
+
     text-decoration: none;
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
+
     border-radius: 12px;
-    box-shadow: 0 5px 12px rgba(21, 101, 192, 0.2);
     transition: 0.25s;
 }
 
-.side-menu a:hover {
+.top-menu a:hover {
     background: #00897b;
-    transform: translateX(-4px);
+    transform: translateY(-3px);
 }
 
-/* กล่องแต่ละหน้า */
+/* ========================= */
+/* หน้าเต็มจอ */
+/* ========================= */
+
 .page {
-    position: relative;
+    width: 100%;
     min-height: 100vh;
-    padding: 55px 200px 55px 35px;
+
+    padding: 115px 35px 40px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,116 +90,162 @@ body {
 
 .page-box {
     width: 100%;
-    max-width: 950px;
-    min-height: 85vh;
-    padding: 55px;
-    background: rgba(255, 255, 255, 0.97);
+    max-width: 1250px;
+    min-height: calc(100vh - 155px);
+
+    padding: 50px;
+
+    background: rgba(255, 255, 255, 0.98);
     border: 2px solid #c7eaf5;
     border-radius: 30px;
+
     box-shadow: 0 15px 40px rgba(35, 90, 120, 0.15);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-/* ตกแต่งหัวข้อ */
+/* ========================= */
+/* หัวข้อ */
+/* ========================= */
+
 .page-title {
+    margin: 0 0 12px;
     text-align: center;
     color: #1565c0;
-    font-size: 38px;
-    margin: 0 0 12px;
+    font-size: 42px;
 }
 
 .page-subtitle {
+    margin-bottom: 25px;
     text-align: center;
     color: #00897b;
     font-size: 18px;
-    letter-spacing: 3px;
-    margin-bottom: 35px;
+    font-weight: bold;
+    letter-spacing: 4px;
 }
 
 .line {
-    width: 85px;
+    width: 90px;
     height: 4px;
-    margin: 0 auto 30px;
-    border-radius: 10px;
+    margin: 0 auto 35px;
     background: #29b6f6;
+    border-radius: 10px;
 }
 
+/* ========================= */
 /* หน้าคำนำ */
+/* ========================= */
+
 .preface-content {
-    max-width: 750px;
-    margin: auto;
-    padding: 35px;
+    width: 100%;
+    max-width: 950px;
+
+    margin: 0 auto;
+    padding: 35px 45px;
+
     background: #f4fcff;
     border: 2px solid #d5edf5;
     border-radius: 22px;
 }
 
 .preface-content p {
-    font-size: 20px;
-    line-height: 2.2;
-    text-indent: 50px;
-    text-align: justify;
     margin: 0 0 22px;
+
+    color: #455a64;
+    font-size: 20px;
+    line-height: 2.1;
+
+    text-align: justify;
+    text-indent: 50px;
 }
 
 .signature {
-    margin-top: 40px;
-    text-align: right;
+    margin-top: 35px;
+    color: #455a64;
     font-size: 18px;
     line-height: 2;
+    text-align: right;
 }
 
+/* ========================= */
 /* หน้า About me */
+/* ========================= */
+
 .about-layout {
-    display: flex;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+
     align-items: center;
-    gap: 45px;
+    gap: 60px;
 }
 
 .profile-frame {
-    flex: 0 0 240px;
-    width: 240px;
-    height: 240px;
-    padding: 8px;
+    width: 300px;
+    height: 300px;
+
+    padding: 9px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #29b6f6, #1565c0, #26a69a);
-    box-shadow: 0 10px 25px rgba(21, 101, 192, 0.25);
+
+    background: linear-gradient(
+        135deg,
+        #29b6f6,
+        #1565c0,
+        #26a69a
+    );
+
+    box-shadow: 0 12px 30px rgba(21, 101, 192, 0.25);
 }
 
 .profile-frame img {
     display: block;
     width: 100%;
     height: 100%;
+
     object-fit: cover;
-    border: 5px solid white;
+
+    border: 6px solid white;
     border-radius: 50%;
 }
 
 .about-text {
-    flex: 1;
+    width: 100%;
+    min-width: 0;
 }
 
 .about-text h2 {
+    margin: 0 0 25px;
     color: #00897b;
-    font-size: 28px;
-    margin-top: 0;
-    margin-bottom: 25px;
+    font-size: 30px;
 }
 
+/* ========================= */
+/* ข้อมูลแต่ละบรรทัด */
+/* ========================= */
+
 .info-box {
-    padding: 25px;
+    width: 100%;
+    padding: 25px 30px;
+
     background: #f4fcff;
     border: 2px solid #d5edf5;
     border-radius: 20px;
 }
 
 .info-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    padding: 13px 0;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+
+    gap: 20px;
+    align-items: start;
+
+    padding: 14px 0;
     border-bottom: 1px solid #d8edf2;
-    font-size: 18px;
-    line-height: 1.6;
 }
 
 .info-row:last-child {
@@ -179,29 +253,119 @@ body {
 }
 
 .info-label {
-    flex: 0 0 150px;
     color: #1565c0;
+    font-size: 18px;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .info-value {
-    flex: 1;
+    min-width: 0;
     color: #455a64;
-    word-break: break-word;
+    font-size: 18px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
 }
 
+/* ========================= */
+/* หน้าผลงาน */
+/* ========================= */
+
+.work-intro {
+    text-align: center;
+    color: #455a64;
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.work-grid {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.work-card {
+    min-height: 220px;
+    padding: 25px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: #f4fcff;
+    border: 2px solid #d5edf5;
+    border-radius: 20px;
+
+    transition: 0.25s;
+}
+
+.work-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(35, 90, 120, 0.12);
+    border-color: #29b6f6;
+}
+
+.work-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.work-card h3 {
+    margin: 0 0 12px;
+    color: #1565c0;
+    font-size: 21px;
+}
+
+.work-card p {
+    margin: 0;
+    color: #607d8b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ช่องใส่รูปผลงานภายหลัง */
+.work-image {
+    width: 100%;
+    height: 130px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 15px;
+
+    color: #78909c;
+    background: #eaf9ff;
+    border: 2px dashed #90caf9;
+    border-radius: 15px;
+    font-size: 16px;
+}
+
+/* ========================= */
 /* ปุ่มกลับหน้าแรก */
+/* ========================= */
+
 .home-button {
     display: block;
     width: fit-content;
+
     margin: 35px auto 0;
-    padding: 14px 28px;
-    background: #1565c0;
+    padding: 14px 30px;
+
     color: white;
+    background: #1565c0;
+
     text-decoration: none;
-    border-radius: 12px;
+    font-size: 17px;
     font-weight: bold;
-    box-shadow: 0 7px 18px rgba(21, 101, 192, 0.2);
+
+    border-radius: 12px;
     transition: 0.25s;
 }
 
@@ -211,47 +375,103 @@ body {
 }
 
 footer {
-    text-align: center;
+    margin-top: 30px;
     color: #607d8b;
     font-size: 15px;
-    margin-top: 35px;
+    text-align: center;
 }
 
-/* สำหรับโทรศัพท์ */
-@media (max-width: 800px) {
+/* ========================= */
+/* หน้าจอขนาดกลาง */
+/* ========================= */
 
-    .side-menu {
-        top: 12px;
-        right: 12px;
-        width: 120px;
-        gap: 7px;
+@media (max-width: 950px) {
+
+    .top-menu {
+        padding: 12px 15px;
+        gap: 8px;
     }
 
-    .side-menu a {
-        padding: 9px 5px;
-        font-size: 12px;
+    .top-menu a {
+        padding: 10px 14px;
+        font-size: 13px;
     }
 
     .page {
-        padding: 25px 145px 25px 12px;
-        min-height: 100vh;
+        padding: 105px 20px 30px;
     }
 
     .page-box {
-        padding: 25px 18px;
+        padding: 35px 25px;
+    }
+
+    .about-layout {
+        grid-template-columns: 230px minmax(0, 1fr);
+        gap: 30px;
+    }
+
+    .profile-frame {
+        width: 230px;
+        height: 230px;
+    }
+
+    .info-row {
+        grid-template-columns: 145px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .info-label,
+    .info-value {
+        font-size: 16px;
+    }
+
+    .work-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ========================= */
+/* โทรศัพท์ */
+/* ========================= */
+
+@media (max-width: 650px) {
+
+    .top-menu {
+        padding: 10px 8px;
+        justify-content: center;
+        gap: 5px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .top-menu a {
+        flex-shrink: 0;
+        padding: 9px 11px;
+        font-size: 11px;
+        border-radius: 9px;
+    }
+
+    .page {
+        padding: 95px 10px 20px;
+    }
+
+    .page-box {
+        min-height: calc(100vh - 115px);
+        padding: 25px 15px;
         border-radius: 22px;
     }
 
     .page-title {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .page-subtitle {
         font-size: 14px;
+        letter-spacing: 2px;
     }
 
     .preface-content {
-        padding: 22px;
+        padding: 22px 18px;
     }
 
     .preface-content p {
@@ -261,14 +481,14 @@ footer {
     }
 
     .about-layout {
+        display: flex;
         flex-direction: column;
         gap: 25px;
     }
 
     .profile-frame {
-        width: 180px;
-        height: 180px;
-        flex-basis: 180px;
+        width: 200px;
+        height: 200px;
     }
 
     .about-text {
@@ -276,8 +496,8 @@ footer {
     }
 
     .about-text h2 {
+        font-size: 25px;
         text-align: center;
-        font-size: 24px;
     }
 
     .info-box {
@@ -286,16 +506,27 @@ footer {
 
     .info-row {
         display: block;
-        font-size: 16px;
+        padding: 13px 0;
     }
 
     .info-label {
         display: block;
-        margin-bottom: 4px;
+        margin-bottom: 5px;
+        font-size: 16px;
+        white-space: normal;
     }
 
     .info-value {
         display: block;
+        font-size: 16px;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-card {
+        min-height: 200px;
     }
 }
 </style>
@@ -303,23 +534,19 @@ footer {
 
 <body>
 
-<!-- เมนูด้านขวาบน -->
-<nav class="side-menu">
+<!-- ========================= -->
+<!-- เมนูด้านบน -->
+<!-- ========================= -->
+
+<nav class="top-menu">
     <a href="#preface">📖 คำนำ</a>
     <a href="#about">👤 About me</a>
+    <a href="#works">📁 ผลงาน</a>
     <a href="index.html">🏠 หน้าแรก</a>
 </nav>
 
 
 <!-- ========================= -->
-<!-- หน้า 1 : คำนำ -->
-<!-- ========================= -->
-
-<section class="page" id="preface">
-
-    <div class="page-box">
-
-        <!-- ========================= -->
 <!-- หน้า 1 : คำนำ -->
 <!-- ========================= -->
 
@@ -387,7 +614,6 @@ footer {
 
 </section>
 
-            
 
 <!-- ========================= -->
 <!-- หน้า 2 : About me -->
@@ -409,7 +635,10 @@ footer {
 
             <!-- รูปเดิมจากหน้า index -->
             <div class="profile-frame">
-                <img src="IMG_1529.jpeg" alt="รูปโปรไฟล์ นายศักรนันทน์ คำทอง">
+                <img
+                    src="IMG_1529.jpeg"
+                    alt="รูปโปรไฟล์ นายศักรนันทน์ คำทอง"
+                >
             </div>
 
             <!-- ข้อมูลส่วนตัว -->
@@ -436,7 +665,7 @@ footer {
                     <div class="info-row">
                         <div class="info-label">วันเดือนปีเกิด</div>
                         <div class="info-value">
-                        2 มีนาคม 2552
+                            18 ตุลาคม 2551
                         </div>
                     </div>
 
@@ -448,35 +677,157 @@ footer {
                     </div>
 
                     <div class="info-row">
-                        <div class="info-label">โรงเรียน</div>
+                        <div class="info-label">มหาวิทยาลัยที่สนใจ</div>
                         <div class="info-value">
-                            โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”
+                            มหาวิทยาลัยเกษตรศาสตร์ บางเขน
+                        </div>
+                    </div>
+
+                    <div class="info-row">
+                        <div class="info-label">เป้าหมายในชีวิต</div>
+                        <div class="info-value">
+                            ศึกษาต่อคณะวิศวกรรมศาสตร์
+                            สาขาวิศวกรรมอุตสาหการ
+                            และประกอบอาชีพวิศวกรอุตสาหการ
                         </div>
                     </div>
 
                     <div class="info-row">
                         <div class="info-label">เบอร์โทรศัพท์</div>
                         <div class="info-value">
-                            0927814013
+                            กรอกเบอร์โทรศัพท์ของคุณ
                         </div>
                     </div>
 
                     <div class="info-row">
                         <div class="info-label">Facebook</div>
                         <div class="info-value">
-                            Sakaranan kamthong
+                            กรอกชื่อ Facebook ของคุณ
                         </div>
                     </div>
 
                     <div class="info-row">
                         <div class="info-label">Gmail</div>
                         <div class="info-value">
-                            Sakaranankamthong1@gmail.com
+                            กรอก Gmail ของคุณ
                         </div>
                     </div>
 
                 </div>
 
+            </div>
+
+        </div>
+
+        <footer>
+            แฟ้มสะสมผลงาน | นายศักรนันทน์ คำทอง
+        </footer>
+
+    </div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- หน้าสุดท้าย : ผลงาน -->
+<!-- ========================= -->
+
+<section class="page" id="works">
+
+    <div class="page-box">
+
+        <h1 class="page-title">ผลงาน</h1>
+
+        <div class="page-subtitle">
+            MY PORTFOLIO
+        </div>
+
+        <div class="line"></div>
+
+        <p class="work-intro">
+            รวบรวมผลงาน กิจกรรม และประสบการณ์
+            ที่แสดงถึงความสนใจ ความสามารถ
+            และการพัฒนาตนเองของข้าพเจ้า
+        </p>
+
+        <div class="work-grid">
+
+            <div class="work-card">
+                <div class="work-image">
+                    📷 ใส่รูปผลงานที่ 1
+                </div>
+
+                <h3>ผลงานด้านวิทยาศาสตร์</h3>
+
+                <p>
+                    ใส่รายละเอียดเกี่ยวกับโครงงาน
+                    หรือผลงานด้านวิทยาศาสตร์
+                </p>
+            </div>
+
+            <div class="work-card">
+                <div class="work-image">
+                    📷 ใส่รูปผลงานที่ 2
+                </div>
+
+                <h3>ผลงานด้านเทคโนโลยี</h3>
+
+                <p>
+                    ใส่รายละเอียดเกี่ยวกับการสร้างเว็บไซต์
+                    หรือผลงานด้านเทคโนโลยี
+                </p>
+            </div>
+
+            <div class="work-card">
+                <div class="work-image">
+                    📷 ใส่รูปผลงานที่ 3
+                </div>
+
+                <h3>กิจกรรมการเรียนรู้</h3>
+
+                <p>
+                    ใส่รายละเอียดกิจกรรม
+                    ที่เคยเข้าร่วม
+                </p>
+            </div>
+
+            <div class="work-card">
+                <div class="work-image">
+                    📷 ใส่รูปผลงานที่ 4
+                </div>
+
+                <h3>กิจกรรมจิตอาสา</h3>
+
+                <p>
+                    ใส่รายละเอียดกิจกรรมจิตอาสา
+                    และการช่วยเหลือสังคม
+                </p>
+            </div>
+
+            <div class="work-card">
+                <div class="work-image">
+                    📷 ใส่รูปผลงานที่ 5
+                </div>
+
+                <h3>ผลงานที่ภาคภูมิใจ</h3>
+
+                <p>
+                    ใส่รายละเอียดผลงาน
+                    ที่ภาคภูมิใจที่สุด
+                </p>
+            </div>
+
+            <div class="work-card">
+                <div class="work-image">
+                    📷 ใส่รูปผลงานที่ 6
+                </div>
+
+                <h3>ประสบการณ์อื่น ๆ</h3>
+
+                <p>
+                    ใส่รายละเอียดความสามารถ
+                    และประสบการณ์เพิ่มเติม
+                </p>
             </div>
 
         </div>
