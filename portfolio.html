@@ -25,10 +25,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ========================= */
-/* เมนูด้านบน แนวนอน */
-/* ========================= */
-
+/* เมนูด้านบน */
 .top-menu {
     position: fixed;
     top: 0;
@@ -71,16 +68,11 @@ body {
     transform: translateY(-3px);
 }
 
-/* ========================= */
-/* ทุกหน้าเต็มหน้าจอ */
-/* ========================= */
-
+/* เลย์เอาต์หลัก */
 .page {
     width: 100%;
     min-height: 100vh;
-
     padding: 115px 35px 40px;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,24 +82,17 @@ body {
     width: 100%;
     max-width: 1350px;
     min-height: calc(100vh - 155px);
-
     padding: 45px;
-
     background: rgba(255, 255, 255, 0.98);
     border: 2px solid #c7eaf5;
     border-radius: 30px;
-
     box-shadow: 0 15px 40px rgba(35, 90, 120, 0.15);
-
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* ========================= */
 /* หัวข้อ */
-/* ========================= */
-
 .page-title {
     margin: 0 0 10px;
     text-align: center;
@@ -132,17 +117,12 @@ body {
     border-radius: 10px;
 }
 
-/* ========================= */
 /* หน้า 1 : คำนำ */
-/* ========================= */
-
 .preface-content {
     width: 100%;
     max-width: 1100px;
-
     margin: 0 auto;
     padding: 35px 50px;
-
     background: #f4fcff;
     border: 2px solid #d5edf5;
     border-radius: 22px;
@@ -150,11 +130,9 @@ body {
 
 .preface-content p {
     margin: 0 0 22px;
-
     color: #455a64;
     font-size: 20px;
     line-height: 2.1;
-
     text-align: justify;
     text-indent: 50px;
 }
@@ -167,16 +145,11 @@ body {
     text-align: right;
 }
 
-/* ========================= */
 /* หน้า 2 : About me */
-/* ========================= */
-
 .about-layout {
     width: 100%;
-
     display: grid;
     grid-template-columns: 350px minmax(0, 1fr);
-
     align-items: center;
     gap: 70px;
 }
@@ -184,17 +157,14 @@ body {
 .profile-frame {
     width: 350px;
     height: 350px;
-
     padding: 10px;
     border-radius: 50%;
-
     background: linear-gradient(
         135deg,
         #29b6f6,
         #1565c0,
         #26a69a
     );
-
     box-shadow: 0 12px 30px rgba(21, 101, 192, 0.25);
 }
 
@@ -202,9 +172,7 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-
     object-fit: cover;
-
     border: 6px solid white;
     border-radius: 50%;
 }
@@ -220,12 +188,9 @@ body {
     font-size: 30px;
 }
 
-/* ข้อมูลแต่ละหัวข้ออยู่คนละบรรทัด */
-
 .info-box {
     width: 100%;
     padding: 25px 30px;
-
     background: #f4fcff;
     border: 2px solid #d5edf5;
     border-radius: 20px;
@@ -233,13 +198,10 @@ body {
 
 .info-row {
     width: 100%;
-
     display: grid;
     grid-template-columns: 200px minmax(0, 1fr);
-
     gap: 20px;
     align-items: start;
-
     padding: 14px 0;
     border-bottom: 1px solid #d8edf2;
 }
@@ -263,13 +225,9 @@ body {
     overflow-wrap: anywhere;
 }
 
-/* ========================= */
 /* หน้า 3 : มหาวิทยาลัยและเป้าหมาย */
-/* ========================= */
-
 .future-grid {
     width: 100%;
-
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px;
@@ -278,13 +236,10 @@ body {
 .future-card {
     min-height: 350px;
     padding: 35px;
-
     background: #f4fcff;
     border: 2px solid #d5edf5;
     border-radius: 22px;
-
     text-align: center;
-
     box-shadow: 0 8px 20px rgba(35, 90, 120, 0.06);
 }
 
@@ -310,14 +265,10 @@ body {
     color: #00897b;
 }
 
-/* ========================= */
 /* หน้า 4 : ผลงาน */
-/* ========================= */
-
 .work-intro {
     margin: 0 auto 30px;
     max-width: 950px;
-
     color: #455a64;
     font-size: 19px;
     line-height: 1.8;
@@ -326,7 +277,6 @@ body {
 
 .work-grid {
     width: 100%;
-
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
@@ -335,11 +285,9 @@ body {
 .work-card {
     min-height: 570px;
     padding: 20px;
-
     background: #f4fcff;
     border: 2px solid #d5edf5;
     border-radius: 20px;
-
     text-align: center;
     transition: 0.25s;
 }
@@ -350,18 +298,13 @@ body {
     box-shadow: 0 10px 25px rgba(35, 90, 120, 0.12);
 }
 
-/* ช่องใส่รูปผลงาน */
-
 .work-image {
     width: 100%;
     height: 230px;
-
     margin-bottom: 20px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     background: #eaf9ff;
     border: 2px solid #c7eaf5;
     border-radius: 15px;
@@ -406,23 +349,16 @@ body {
     text-align: left;
 }
 
-/* ========================= */
 /* ท้ายหน้า */
-/* ========================= */
-
 footer {
-    margin-top: 30px;
+    padding: 30px 20px;
     color: #607d8b;
     font-size: 15px;
     text-align: center;
 }
 
-/* ========================= */
-/* หน้าจอขนาดกลาง */
-/* ========================= */
-
+/* Responsive */
 @media (max-width: 1100px) {
-
     .top-menu {
         padding: 12px 15px;
         gap: 8px;
@@ -466,12 +402,7 @@ footer {
     }
 }
 
-/* ========================= */
-/* โทรศัพท์ */
-/* ========================= */
-
 @media (max-width: 650px) {
-
     .top-menu {
         padding: 10px 8px;
         justify-content: flex-start;
@@ -591,440 +522,175 @@ footer {
 
 <body>
 
-<!-- ========================= -->
 <!-- เมนูด้านบน -->
-<!-- ========================= -->
-
 <nav class="top-menu">
     <a href="#preface">📖 คำนำ</a>
     <a href="#about">👤 About me</a>
     <a href="#future">🎓 มหาวิทยาลัย</a>
     <a href="#works">📁 ผลงาน</a>
+    <a href="thankyou.html">🙏 ขอบคุณ</a>
     <a href="index.html">🏠 หน้าแรก</a>
 </nav>
 
-
-<!-- ========================= -->
 <!-- หน้า 1 : คำนำ -->
-<!-- ========================= -->
-
 <section class="page" id="preface">
-
     <div class="page-box">
-
-        <h1 class="page-title">คำนำ</h1>
-
-        <div class="page-subtitle">
-            PORTFOLIO
-        </div>
-
+        <h1 class="page-title">📖 คำนำ</h1>
+        <div class="page-subtitle">PREFACE</div>
         <div class="line"></div>
 
         <div class="preface-content">
-
             <p>
-                แฟ้มสะสมผลงานเล่มนี้จัดทำขึ้นเพื่อรวบรวมประวัติส่วนตัว
-                ประวัติการศึกษา ความรู้ ความสามารถ ผลงาน กิจกรรม
-                และประสบการณ์ต่าง ๆ ของข้าพเจ้า
-                เพื่อใช้เป็นข้อมูลประกอบการพิจารณาในการศึกษาต่อ
-                ระดับมหาวิทยาลัย และแสดงให้เห็นถึงความตั้งใจ
-                ความพยายาม และการพัฒนาตนเองอย่างต่อเนื่อง
+                แฟ้มสะสมผลงาน (Portfolio) ฉบับนี้ จัดทำขึ้นเพื่อเป็นเอกสารนำเสนอข้อมูลเกี่ยวกับประวัติส่วนตัว ประวัติการศึกษา ความรู้ ความสามารถ ทักษะ ตลอดจนผลงานและการเข้าร่วมกิจกรรมต่างๆ ของข้าพเจ้า โดยมีเป้าหมายสูงสุดเพื่อเข้าศึกษาต่อในระดับอุดมศึกษา ในสาขาวิชาวิศวกรรมอุตสาหการ
             </p>
-
             <p>
-                ข้าพเจ้ามีความสนใจด้านวิทยาศาสตร์ คณิตศาสตร์
-                เทคโนโลยี และกระบวนการทำงานต่าง ๆ
-                โดยเฉพาะการวางแผน การแก้ไขปัญหา
-                การจัดการทรัพยากร และการปรับปรุงกระบวนการ
-                ให้สามารถทำงานได้อย่างมีประสิทธิภาพ
-            </p>
-
-            <p>
-                ด้วยเหตุนี้ ข้าพเจ้าจึงมีความตั้งใจที่จะศึกษาต่อ
-                ในคณะวิศวกรรมศาสตร์
-                สาขาวิศวกรรมอุตสาหการ
-                เพื่อพัฒนาความรู้ด้านการวิเคราะห์ระบบ
-                การวางแผนการผลิต การจัดการคุณภาพ
-                และการปรับปรุงกระบวนการทำงาน
-                ซึ่งเป็นความรู้สำคัญสำหรับการประกอบอาชีพ
-                วิศวกรอุตสาหการในอนาคต
-            </p>
-
-            <p>
-                ข้าพเจ้าหวังเป็นอย่างยิ่งว่าแฟ้มสะสมผลงานเล่มนี้
-                จะช่วยแสดงให้เห็นถึงความมุ่งมั่น ความสามารถ
-                ความรับผิดชอบ และความพร้อมในการศึกษาต่อ
-                รวมถึงเป็นส่วนหนึ่งในการก้าวไปสู่เป้าหมาย
-                ที่ข้าพเจ้าตั้งใจไว้
-            </p>
-
-            <p>
-                ขอขอบพระคุณคุณครู ผู้ปกครอง
-                และผู้ที่มีส่วนเกี่ยวข้องทุกท่าน
-                ที่ให้คำแนะนำ สนับสนุน และให้กำลังใจข้าพเจ้า
-                จนทำให้แฟ้มสะสมผลงานเล่มนี้สำเร็จลุล่วงไปด้วยดี
+                ข้าพเจ้ามีความสนใจและมุ่งมั่นที่จะเรียนรู้ในด้านการบริหารจัดการระบบ กระบวนการผลิต และเทคโนโลยีเพื่อเพิ่มประสิทธิภาพการทำงาน ข้าพเจ้าหวังเป็นอย่างยิ่งว่าแฟ้มสะสมผลงานฉบับนี้จะช่วยให้คณะกรรมการได้เห็นถึงความตั้งใจ ศักยภาพ และความพร้อมของข้าพเจ้าในการเข้าศึกษาต่อในสาขาวิชานี้
             </p>
 
             <div class="signature">
-                จัดทำโดย<br>
-                <strong>นายศักรนันทน์ คำทอง</strong>
+                นายศักรนันทน์ คำทอง<br>
+                ผู้จัดทำ
             </div>
-
         </div>
-
-        <footer>
-            แฟ้มสะสมผลงาน | นายศักรนันทน์ คำทอง
-        </footer>
-
     </div>
-
 </section>
 
-
-<!-- ========================= -->
 <!-- หน้า 2 : About me -->
-<!-- ========================= -->
-
 <section class="page" id="about">
-
     <div class="page-box">
-
-        <h1 class="page-title">About me</h1>
-
-        <div class="page-subtitle">
-            ประวัติส่วนตัว
-        </div>
-
+        <h1 class="page-title">👤 ประวัติส่วนตัว</h1>
+        <div class="page-subtitle">ABOUT ME</div>
         <div class="line"></div>
 
         <div class="about-layout">
-
-            <!-- รูปเดิมจากหน้าแรก -->
             <div class="profile-frame">
-                <img
-                    src="IMG_1529.jpeg"
-                    alt="รูปโปรไฟล์ นายศักรนันทน์ คำทอง"
-                >
+                <img src="IMG_1529.jpeg" alt="รูปโปรไฟล์">
             </div>
 
-            <!-- ข้อมูลส่วนตัว -->
             <div class="about-text">
-
-                <h2>ข้อมูลส่วนตัว</h2>
-
+                <h2>ข้อมูลทั่วไป</h2>
                 <div class="info-box">
-
                     <div class="info-row">
-                        <div class="info-label">ชื่อ-สกุล</div>
-                        <div class="info-value">
-                            นายศักรนันทน์ คำทอง
-                        </div>
+                        <div class="info-label">ชื่อ-นามสกุล:</div>
+                        <div class="info-value">นายศักรนันทน์ คำทอง</div>
                     </div>
-
                     <div class="info-row">
-                        <div class="info-label">อายุ</div>
-                        <div class="info-value">
-                            17 ปี
-                        </div>
+                        <div class="info-label">แผนการเรียน:</div>
+                        <div class="info-value">เตรียมวิศวกรรมศาสตร์</div>
                     </div>
-
                     <div class="info-row">
-                        <div class="info-label">วันเดือนปีเกิด</div>
-                        <div class="info-value">
-                            2 มีนาคม 2552
-                        </div>
+                        <div class="info-label">สาขาที่สนใจ:</div>
+                        <div class="info-value">วิศวกรรมอุตสาหการ (Industrial Engineering)</div>
                     </div>
-
-                    <div class="info-row">
-                        <div class="info-label">แผนการเรียน</div>
-                        <div class="info-value">
-                            เตรียมวิศวกรรมศาสตร์
-                        </div>
-                    </div>
-
-                    <div class="info-row">
-                        <div class="info-label">โรงเรียน</div>
-                        <div class="info-value">
-                            โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”
-                        </div>
-                    </div>
-
-                    <div class="info-row">
-                        <div class="info-label">เบอร์โทรศัพท์</div>
-                        <div class="info-value">
-                            0927814013
-                        </div>
-                    </div>
-
-                    <div class="info-row">
-                        <div class="info-label">Facebook</div>
-                        <div class="info-value">
-                            Sakranan kamthong
-                        </div>
-                    </div>
-
-                    <div class="info-row">
-                        <div class="info-label">Gmail</div>
-                        <div class="info-value">
-                            Sakkranankamthong1@gmail.com
-                        </div>
-                    </div>
-
                 </div>
-
             </div>
-
         </div>
-
-        <footer>
-            แฟ้มสะสมผลงาน | นายศักรนันทน์ คำทอง
-        </footer>
-
     </div>
-
 </section>
 
-
-<!-- ========================= -->
 <!-- หน้า 3 : มหาวิทยาลัยและเป้าหมาย -->
-<!-- ========================= -->
-
 <section class="page" id="future">
-
     <div class="page-box">
-
-        <h1 class="page-title">My Future</h1>
-
-        <div class="page-subtitle">
-            มหาวิทยาลัยที่สนใจและเป้าหมายในชีวิต
-        </div>
-
+        <h1 class="page-title">🎓 มหาวิทยาลัย & เป้าหมายในชีวิต</h1>
+        <div class="page-subtitle">TARGET UNIVERSITY & GOALS</div>
         <div class="line"></div>
 
         <div class="future-grid">
-
-            <!-- มหาวิทยาลัยที่สนใจ -->
             <div class="future-card">
-
-                <div class="future-icon">🎓</div>
-
-                <h2>มหาวิทยาลัยที่สนใจ</h2>
-
+                <div class="future-icon">🏫</div>
+                <h2>มหาวิทยาลัยที่มุ่งหวัง</h2>
                 <p>
-                    <strong>มหาวิทยาลัยเกษตรศาสตร์</strong>
+                    <strong>มหาวิทยาลัยเกษตรศาสตร์ (บางเขน)</strong>
                 </p>
-
                 <p>
-                    วิทยาเขตบางเขน
+                    เนื่องจากเป็นสถาบันที่มีบรรยากาศ และสภาพแวดล้อมการเรียนการสอนที่เอื้อต่อการเรียนรู้ มีคณาจารย์ผู้ทรงคุณวุฒิ รวมถึงนวัตกรรมและเครื่องมือเทคโนโลยีที่ทันสมัย ซึ่งสามารถซัพพอร์ตการทดลอง การวิจัย และการพัฒนาศักยภาพของนิสิตได้อย่างเต็มประสิทธิภาพ
                 </p>
-
-                <p>
-                    คณะที่สนใจ:
-                    <strong>คณะวิศวกรรมศาสตร์</strong>
-                </p>
-
-                <p>
-                    สาขา:
-                    <strong>วิศวกรรมอุตสาหการ</strong>
-                </p>
-
             </div>
 
-            <!-- เป้าหมายในชีวิต -->
             <div class="future-card">
-
                 <div class="future-icon">🎯</div>
-
-                <h2>เป้าหมายในชีวิต</h2>
-
+                <h2>เป้าหมายและการต่อยอด</h2>
                 <p>
-                    ข้าพเจ้ามีเป้าหมายที่จะศึกษาต่อ
-                    ในคณะวิศวกรรมศาสตร์
-                    สาขาวิศวกรรมอุตสาหการ
+                    <strong>มุ่งสู่วิศวกรอุตสาหการ และนักวิศวกรรมการเงิน</strong>
                 </p>
-
                 <p>
-                    เพื่อพัฒนาความรู้ด้านการวางแผน
-                    การจัดการ การวิเคราะห์ข้อมูล
-                    และการปรับปรุงกระบวนการทำงาน
-                    ให้มีประสิทธิภาพ
+                    เป้าหมายระยะสั้นคือการเข้าศึกษาในสาขาวิชาวิศวกรรมอุตสาหการ เพื่อเก็บเกี่ยวทักษะพื้นฐานด้าน Optimization, Data Analytics และการบริหารจัดการระบบ จากนั้นตั้งใจจะนำความรู้ไปต่อยอดศึกษาระดับปริญญาโทในสาขา <strong>วิศวกรรมการเงิน (Financial Engineering)</strong> เนื่องจากรายวิชาของวิศวกรรมอุตสาหการเป็นฐานรากสำคัญที่ปูทางสู่สายงานวิศวกรรมการเงินได้อย่างสมบูรณ์แบบ
                 </p>
-
-                <p>
-                    และนำความรู้ไปประกอบอาชีพ
-                    <strong>วิศวกรอุตสาหการ</strong>
-                    ที่มีความรับผิดชอบ
-                    และสามารถพัฒนาองค์กรให้ก้าวหน้าได้
-                </p>
-
             </div>
-
         </div>
-
-        <footer>
-            ความฝันเริ่มต้นจากความตั้งใจและการลงมือทำ
-        </footer>
-
     </div>
-
 </section>
 
-
-<!-- ========================= -->
 <!-- หน้า 4 : ผลงาน -->
-<!-- ========================= -->
-
 <section class="page" id="works">
-
     <div class="page-box">
-
-        <h1 class="page-title">ผลงาน</h1>
-
-        <div class="page-subtitle">
-            MY PORTFOLIO
-        </div>
-
+        <h1 class="page-title">📁 ผลงานและการเข้าร่วมกิจกรรม</h1>
+        <div class="page-subtitle">PROJECTS & ACTIVITIES</div>
         <div class="line"></div>
 
         <p class="work-intro">
-            รวบรวมผลงานและกิจกรรมที่แสดงถึงความสนใจ
-            ความสามารถ ความรับผิดชอบ
-            และการพัฒนาทักษะของข้าพเจ้า
+            ผลงานและการเข้าร่วมแข่งขันที่สะท้อนถึงการนำทักษะด้านกระบวนการคิด การแก้ปัญหาเชิงระบบ และนวัตกรรมไปประยุกต์ใช้ในสถานการณ์จริง
         </p>
 
         <div class="work-grid">
-
-            <!-- ========================= -->
-            <!-- ผลงานที่ 1 -->
-            <!-- ========================= -->
-
             <div class="work-card">
-
                 <div class="work-image">
-                    <img
-                        src="9234319A-DC63-40C8-BAF4-268930D2E6AD.jpeg"
-                        alt="Mini Startup Camp Non-EE"
-                    >
+                    <img src="startup.jpg" alt="Mini Startup">
                 </div>
-
-                <h3>
-                    เข้าร่วม WORKSHOP
-                    Mini Startup Camp [Non-EE]
-                </h3>
-
+                <h3>การแข่งขัน Mini Startup</h3>
                 <p>
-                    ได้เข้าร่วมกิจกรรม Mini Startup Camp [Non-EE]
-                    ในงาน K-ENGINEERING WORLD TOUR AND
-                    COMPETENCY CHALLENGE 2026
-                    ของคณะวิศวกรรมศาสตร์
-                    สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+                    เข้าร่วมกระบวนการนำเสนอไอเดียธุรกิจและการพัฒนานวัตกรรมต้นแบบ เพื่อตอบโจทย์ปัญหาจริงของผู้ใช้งาน
                 </p>
-
-                <p class="skill-title">
-                    ทักษะที่ได้รับ
-                </p>
-
+                <div class="skill-title">💡 ทักษะที่ได้รับ:</div>
                 <ul class="skill-list">
-                    <li>ทักษะการคิดสร้างสรรค์</li>
-                    <li>ทักษะการวางแผนธุรกิจ</li>
-                    <li>ทักษะการทำงานเป็นทีม</li>
-                    <li>ทักษะการแก้ไขปัญหา</li>
-                    <li>ทักษะการนำเสนอความคิดเห็น</li>
+                    <li><strong>Design Thinking:</strong> กระบวนการคิดเชิงออกแบบเพื่อแก้ปัญหาผู้ใช้</li>
+                    <li><strong>Business Model Canvas:</strong> การวางโครงสร้างโมเดลธุรกิจเบื้องต้น</li>
+                    <li><strong>Pitching & Presentation:</strong> ทักษะการนำเสนอและสื่อสารไอเดียอย่างมีประสิทธิภาพ</li>
                 </ul>
-
             </div>
 
-
-            <!-- ========================= -->
-            <!-- ผลงานที่ 2 -->
-            <!-- ========================= -->
-
             <div class="work-card">
-
                 <div class="work-image">
-                    <img
-                        src="210C3E94-6873-48B6-96B9-583C473BB7A2.jpeg"
-                        alt="กิจกรรมสัปดาห์วิทยาศาสตร์และเทคโนโลยี"
-                    >
+                    <img src="science-day.jpg" alt="นิทรรศการวันวิทยาศาสตร์">
                 </div>
-
-                <h3>
-                    เป็นวิทยากรจัดแสดงนิทรรศการ
-                    วิทยาศาสตร์และเทคโนโลยี
-                </h3>
-
+                <h3>เกียรติบัตร นิทรรศการวันวิทยาศาสตร์และเทคโนโลยี</h3>
                 <p>
-                    ได้รับเกียรติบัตรจากการเป็นวิทยากร
-                    จัดแสดงนิทรรศการวิทยาศาสตร์และเทคโนโลยี
-                    เนื่องในงานวันวิทยาศาสตร์แห่งชาติ
-                    ประจำปีการศึกษา 2569
-                    ณ โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”
+                    เข้าร่วมกิจกรรมและจัดแสดงผลงานเชิงวิทยาศาสตร์ ประยุกต์ใช้กระบวนการทางวิทยาศาสตร์ในการทดลอง
                 </p>
-
-                <p class="skill-title">
-                    ทักษะที่ได้รับ
-                </p>
-
+                <div class="skill-title">💡 ทักษะที่ได้รับ:</div>
                 <ul class="skill-list">
-                    <li>ทักษะการสื่อสาร</li>
-                    <li>ทักษะการถ่ายทอดความรู้</li>
-                    <li>ทักษะการพูดต่อหน้าชุมชน</li>
-                    <li>ทักษะการทำงานร่วมกับผู้อื่น</li>
-                    <li>ทักษะความรับผิดชอบ</li>
+                    <li><strong>Scientific Method:</strong> การคิดแบบเป็นเหตุเป็นผลและใช้หลักการวิทยาศาสตร์</li>
+                    <li><strong>Data Analysis:</strong> การเก็บรวบรวมและวิเคราะห์ข้อมูลจากการทดลอง</li>
+                    <li><strong>Teamwork:</strong> การทำงานร่วมกับผู้อื่นในกระบวนการจัดแสดงงาน</li>
                 </ul>
-
             </div>
 
-
-            <!-- ========================= -->
-            <!-- ผลงานที่ 3 -->
-            <!-- ========================= -->
-
             <div class="work-card">
-
                 <div class="work-image">
-                    <img
-                        src="74AEBD01-89FA-48C3-A213-C8168B6F1146.jpeg"
-                        alt="BB Young Investor Challenge 2026"
-                    >
+                    <img src="investor.jpg" alt="BB Young Investor">
                 </div>
-
-                <h3>
-                    รางวัลรองชนะเลิศอันดับ 1
-                    การแข่งขัน BB Young Investor Challenge 2026
-                </h3>
-
+                <h3>รองชนะเลิศอันดับ 1 โครงการ BB Young Investor</h3>
                 <p>
-                    ได้รับรางวัลรองชนะเลิศอันดับ 1
-                    จากการแข่งขัน BB Young Investor Challenge 2026
-                    เนื่องในวันสัปดาห์สังคมศึกษา
-                    ประจำปีการศึกษา 2569
-                    ณ โรงเรียนบ้านบึง “อุตสาหกรรมนุเคราะห์”
+                    แข่งขันจำลองการลงทุนและการวางแผนการเงิน นำความรู้ด้านเศรษฐศาสตร์และการวิเคราะห์สภาวะตลาดมาตัดสินใจ
                 </p>
-
-                <p class="skill-title">
-                    ทักษะที่ได้รับ
-                </p>
-
+                <div class="skill-title">💡 ทักษะที่ได้รับ:</div>
                 <ul class="skill-list">
-                    <li>ทักษะการวางแผนทางการเงิน</li>
-                    <li>ทักษะการคิดวิเคราะห์</li>
-                    <li>ทักษะการตัดสินใจ</li>
-                    <li>ทักษะการบริหารจัดการ</li>
-                    <li>ทักษะการทำงานเป็นทีม</li>
+                    <li><strong>Financial Literacy:</strong> การวิเคราะห์งบการเงินและบริหารจัดการความเสี่ยง</li>
+                    <li><strong>Quantitative Analysis:</strong> การคำนวณและประเมินมูลค่าทางคณิตศาสตร์การเงิน</li>
+                    <li><strong>Strategic Decision Making:</strong> การตัดสินใจเชิงวางแผนภายใต้สภาวะตลาดที่มีความผันผวน</li>
                 </ul>
-
             </div>
-
         </div>
-
-        <footer>
-            © 2026 Portfolio ของนายศักรนันทน์ คำทอง
-        </footer>
-
     </div>
-
 </section>
+
+<!-- ท้ายหน้า -->
+<footer>
+    <p style="margin-bottom: 15px;">© Sakranan Kamthong | Industrial Engineering Portfolio</p>
+    <a href="thankyou.html" style="display: inline-block; padding: 12px 25px; background: #00897b; color: white; border-radius: 12px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 15px rgba(0,137,123,0.2); transition: 0.25s;">
+        🙏 ไปยังหน้าขอบคุณกรรมการ →
+    </a>
+</footer>
 
 </body>
 </html>
