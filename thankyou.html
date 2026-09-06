@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ขอบคุณ | นายศักรนันทน์ คำทอง</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 25px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Tahoma, sans-serif;
+            text-align: center;
+            color: #263238;
+            background: linear-gradient(
+                135deg,
+                #dff6ff,
+                #bde7f7,
+                #d5f5e8
+            );
+        }
+
+        .card {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            width: 100%;
+            max-width: 850px;
+            min-height: calc(100vh - 50px);
+            padding: 45px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #c7eaf5;
+            border-radius: 30px;
+            background: rgba(255,255,255,.97);
+            box-shadow: 0 18px 45px rgba(35,90,120,.18);
+        }
+
+        .card::before,
+        .card::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            border-radius: 50%;
+        }
+
+        .card::before {
+            width: 240px;
+            height: 240px;
+            top: -100px;
+            left: -80px;
+            background: #d5f3ff;
+        }
+
+        .card::after {
+            width: 220px;
+            height: 220px;
+            right: -70px;
+            bottom: -90px;
+            background: #d9f5e8;
+        }
+
+        .decoration-icon {
+            font-size: 60px;
+            margin-bottom: 15px;
+            animation: pulse 2s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+
+        .small-title {
+            margin-bottom: 12px;
+            color: #00897b;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        h1 {
+            margin: 0 0 15px;
+            color: #1565c0;
+            font-size: 38px;
+            line-height: 1.4;
+        }
+
+        .line {
+            width: 80px;
+            height: 4px;
+            margin: 0 auto 25px;
+            border-radius: 10px;
+            background: #29b6f6;
+        }
+
+        .thankyou-box {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 30px 35px;
+            border: 2px solid #c7eaf5;
+            border-radius: 22px;
+            background: #f8fdff;
+            box-shadow: 0 8px 20px rgba(35,90,120,.08);
+            margin-bottom: 25px;
+        }
+
+        .thankyou-box p {
+            margin: 12px 0;
+            color: #455a64;
+            font-size: 19px;
+            line-height: 1.9;
+        }
+
+        .thankyou-box strong {
+            color: #00897b;
+        }
+
+        .contact-grid {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            padding: 18px 15px;
+            border: 2px solid #d5edf5;
+            border-radius: 16px;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(35,90,120,.06);
+            transition: 0.25s;
+        }
+
+        .contact-item:hover {
+            border-color: #29b6f6;
+            transform: translateY(-3px);
+        }
+
+        .contact-item h3 {
+            margin: 0 0 6px;
+            color: #1565c0;
+            font-size: 16px;
+        }
+
+        .contact-item p {
+            margin: 0;
+            color: #607d8b;
+            font-size: 15px;
+            font-weight: bold;
+            word-break: break-word;
+        }
+
+        .btn-group {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: bold;
+            transition: .25s;
+        }
+
+        .btn-primary {
+            background: #1565c0;
+            color: white;
+            box-shadow: 0 8px 20px rgba(21,101,192,.25);
+        }
+
+        .btn-primary:hover {
+            background: #0d47a1;
+            transform: translateY(-4px);
+        }
+
+        .btn-secondary {
+            background: #fff;
+            color: #00897b;
+            border: 2px solid #00897b;
+            box-shadow: 0 5px 15px rgba(0,137,123,.1);
+        }
+
+        .btn-secondary:hover {
+            background: #e0f2f1;
+            transform: translateY(-4px);
+        }
+
+        @media (max-width: 650px) {
+            body {
+                padding: 15px;
+            }
+
+            .card {
+                min-height: calc(100vh - 30px);
+                padding: 35px 18px;
+                border-radius: 25px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .thankyou-box {
+                padding: 22px 18px;
+            }
+
+            .thankyou-box p {
+                font-size: 16px;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .btn-group {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 12px 20px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="card">
+
+        <div class="decoration-icon">
+            ⚙️ 🙏 ⚙️
+        </div>
+
+        <div class="small-title">
+            THANK YOU FOR YOUR TIME
+        </div>
+
+        <h1>
+            ขอขอบพระคุณคณะกรรมการทุกท่าน
+        </h1>
+
+        <div class="line"></div>
+
+        <section class="thankyou-box">
+            <p>
+                ขอขอบพระคุณคณะกรรมการทุกท่านที่ได้เสียสละเวลาอันมีค่าในการพิจารณาแฟ้มสะสมผลงานฉบับนี้
+            </p>
+            <p>
+                ผมมุ่งมั่นและตั้งใจอย่างยิ่งที่จะนำความรู้ ความสามารถ และความ passion ทางด้าน 
+                <strong>วิศวกรรมอุตสาหการ (Industrial Engineering)</strong> เข้ามาศึกษาต่อและร่วมสร้างสรรค์ประโยชน์ให้กับมหาวิทยาลัยในอนาคตครับ
+            </p>
+        </section>
+
+        <section class="contact-grid">
+            <div class="contact-item">
+                <h3>📧 Email</h3>
+                <p>sakranan.k@gmail.com</p>
+            </div>
+            <div class="contact-item">
+                <h3>📞 Phone</h3>
+                <p>0XX-XXX-XXXX</p>
+            </div>
+        </section>
+
+        <div class="btn-group">
+            <a href="portfolio.html" class="btn btn-secondary">
+                ← กลับสู่หน้า Portfolio
+            </a>
+            <a href="index.html" class="btn btn-primary">
+                🏠 กลับสู่หน้าแรก
+            </a>
+        </div>
+
+    </main>
+
+</body>
+</html>
