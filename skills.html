@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ทักษะ & กิจกรรม | Portfolio</title>
+    <title>บทสรุปและความมุ่งมั่น | Portfolio</title>
     <style>
         * { box-sizing: border-box; }
         body { margin: 0; min-height: 100vh; font-family: sans-serif; background: linear-gradient(135deg, #dff6ff, #bde7f7, #d5f5e8); color: #263238; }
@@ -11,19 +11,22 @@
         .top-menu a { padding: 9px 16px; color: white; background: #1565c0; text-decoration: none; border-radius: 10px; font-size: 13px; font-weight: bold; }
         .top-menu a:hover, .top-menu a.active { background: #00897b; }
         .container { padding: 110px 20px 40px; display: flex; justify-content: center; }
-        .card { width: 100%; max-width: 1000px; padding: 40px; border-radius: 25px; background: white; border: 2px solid #c7eaf5; }
+        .card { width: 100%; max-width: 900px; padding: 40px; border-radius: 25px; background: white; border: 2px solid #c7eaf5; }
         h1 { color: #1565c0; text-align: center; margin-top: 0; }
         .line { width: 80px; height: 4px; background: #29b6f6; margin: 10px auto 25px; border-radius: 10px; }
         
-        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 25px; }
+        .summary-box { background: #f8fdff; border: 2px solid #d5edf5; border-radius: 20px; padding: 30px; margin-top: 20px; line-height: 1.8; color: #37474f; }
+        .quote-title { font-size: 20px; font-weight: bold; color: #00897b; text-align: center; margin-bottom: 15px; }
         
-        /* ช่องสี่เหลี่ยมสำหรับนำรูปกิจกรรมมาใส่ */
-        .photo-card { height: 210px; border: 2px dashed #90caf9; border-radius: 15px; background: #f8fdff; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #546e7a; padding: 10px; overflow: hidden; }
-        .photo-card img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; }
+        .highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 25px; text-align: center; }
+        .highlight-item { background: #ffffff; border: 1px solid #b2ebf2; padding: 15px; border-radius: 15px; }
+        .highlight-item .icon { font-size: 28px; margin-bottom: 5px; }
+        .highlight-item .title { font-weight: bold; color: #1565c0; margin-bottom: 5px; }
+        .highlight-item .desc { font-size: 14px; color: #546e7a; }
 
         .nav-buttons { display: flex; justify-content: space-between; margin-top: 35px; }
         .btn-nav { padding: 12px 25px; background: #1565c0; color: white; text-decoration: none; border-radius: 10px; font-weight: bold; }
-        @media(max-width: 750px) { .gallery-grid { grid-template-columns: 1fr; } }
+        @media(max-width: 650px) { .highlights { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -34,35 +37,37 @@
         <a href="about.html">3. About Me</a>
         <a href="target.html">4. มหาวิทยาลัย</a>
         <a href="works.html">5. ผลงาน</a>
-        <a href="skills.html" class="active">6. ทักษะ & กิจกรรม</a>
+        <a href="skills.html" class="active">6. บทสรุป</a>
         <a href="thankyou.html">7. ขอบคุณ</a>
     </nav>
 
     <div class="container">
         <div class="card">
-            <h1>🛠️ ทักษะ และภาพกิจกรรม (ACTIVITIES)</h1>
+            <h1>💡 บทสรุปและความมุ่งมั่น (SUMMARY)</h1>
             <div class="line"></div>
 
-            <!-- 📷 กรอบสำหรับใส่รูปภาพกิจกรรม -->
-            <div class="gallery-grid">
-                <div class="photo-card">
-                    <!-- ✏️ เปลี่ยนเป็น <img src="รูปกิจกรรม1.jpg"> -->
-                    📷 <span>[ ช่องใส่รูปภาพกิจกรรมที่ 1 ]</span>
-                </div>
-                <div class="photo-card">
-                    📷 <span>[ ช่องใส่รูปภาพกิจกรรมที่ 2 ]</span>
-                </div>
-                <div class="photo-card">
-                    📷 <span>[ ช่องใส่รูปภาพกิจกรรมที่ 3 ]</span>
-                </div>
-                <div class="photo-card">
-                    📷 <span>[ ช่องใส่รูปภาพกิจกรรมที่ 4 ]</span>
-                </div>
-                <div class="photo-card">
-                    📷 <span>[ ช่องใส่รูปภาพกิจกรรมที่ 5 ]</span>
-                </div>
-                <div class="photo-card">
-                    📷 <span>[ ช่องใส่รูปภาพกิจกรรมที่ 6 ]</span>
+            <div class="summary-box">
+                <div class="quote-title">"พร้อมเรียนรู้ พัฒนา และก้าวสู่เส้นทางวิศวกรอุตสาหการ"</div>
+                <p style="text-align: justify; text-indent: 30px;">
+                    จากประสบการณ์และการทำกิจกรรมต่างๆ ที่ผ่านมา ทำให้ผมได้เรียนรู้ทั้งทักษะด้านเทคโนโลยี การคิดวิเคราะห์อย่างเป็นระบบ และการทำงานร่วมกับผู้อื่น ผมมีความตั้งใจจริงที่จะนำพื้นฐานและความมุ่งมั่นเหล่านี้ เข้ามาศึกษาต่อในสาขาวิชาวิศวกรรมอุตสาหการ มหาวิทยาลัยเกษตรศาสตร์ เพื่อพัฒนาตนเองให้เป็นวิศวกรที่มีคุณภาพในอนาคต
+                </p>
+
+                <div class="highlights">
+                    <div class="highlight-item">
+                        <div class="icon">🚀</div>
+                        <div class="title">PASSION</div>
+                        <div class="desc">ความสนใจด้านการบริหารจัดการระบบและเทคโนโลยี</div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="icon">🧠</div>
+                        <div class="title">MINDSET</div>
+                        <div class="desc">พร้อมเปิดรับสิ่งใหม่ และพัฒนาทักษะอยู่เสมอ</div>
+                    </div>
+                    <div class="highlight-item">
+                        <div class="icon">🎯</div>
+                        <div class="title">GOAL</div>
+                        <div class="desc">มุ่งมั่นศึกษาเพื่อต่อยอดสู่อาชีพในอนาคต</div>
+                    </div>
                 </div>
             </div>
 
