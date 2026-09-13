@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คำนำ | Portfolio</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; min-height: 100vh; font-family: sans-serif; background: linear-gradient(135deg, #dff6ff, #bde7f7, #d5f5e8); color: #263238; }
+        .top-menu { display: flex; justify-content: center; gap: 8px; padding: 12px; background: rgba(255,255,255,0.98); border-bottom: 2px solid #c7eaf5; position: fixed; top: 0; width: 100%; z-index: 100; flex-wrap: wrap; }
+        .top-menu a { padding: 9px 16px; color: white; background: #1565c0; text-decoration: none; border-radius: 10px; font-size: 13px; font-weight: bold; transition: 0.2s; }
+        .top-menu a:hover, .top-menu a.active { background: #00897b; }
+        .container { padding: 110px 20px 40px; display: flex; justify-content: center; }
+        .card { width: 100%; max-width: 900px; padding: 45px; border-radius: 25px; background: white; border: 2px solid #c7eaf5; box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
+        h1 { color: #1565c0; text-align: center; margin-top: 0; font-size: 34px; }
+        .line { width: 80px; height: 4px; background: #29b6f6; margin: 10px auto 30px; border-radius: 10px; }
+        .preface-box { padding: 20px; background: #f8fdff; border-radius: 15px; border: 1px solid #d5edf5; }
+        p { font-size: 19px; line-height: 2; text-indent: 40px; color: #455a64; text-align: justify; margin: 15px 0; }
+        .signature { text-align: right; margin-top: 40px; font-size: 18px; color: #455a64; line-height: 1.8; }
+        .nav-buttons { display: flex; justify-content: space-between; margin-top: 40px; }
+        .btn-nav { padding: 12px 25px; background: #1565c0; color: white; text-decoration: none; border-radius: 10px; font-weight: bold; transition: 0.25s; }
+        .btn-nav:hover { background: #0d47a1; }
+    </style>
+</head>
+<body>
+
+    <nav class="top-menu">
+        <a href="index.html">1. หน้าปก</a>
+        <a href="preface.html" class="active">2. คำนำ</a>
+        <a href="about.html">3. About Me</a>
+        <a href="target.html">4. มหาวิทยาลัย</a>
+        <a href="works.html">5. ผลงาน</a>
+        <a href="skills.html">6. ทักษะ & กิจกรรม</a>
+        <a href="thankyou.html">7. ขอบคุณ</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h1>📖 คำนำ (PREFACE)</h1>
+            <div class="line"></div>
+            
+            <div class="preface-box">
+                <p>แฟ้มสะสมผลงาน (Portfolio) ฉบับนี้ จัดทำขึ้นเพื่อเป็นเอกสารนำเสนอข้อมูลเกี่ยวกับประวัติส่วนตัว ประวัติการศึกษา ความรู้ ความสามารถ ทักษะ ตลอดจนผลงานและการเข้าร่วมกิจกรรมต่างๆ ของข้าพเจ้า โดยมีเป้าหมายสูงสุดเพื่อเข้าศึกษาต่อในระดับอุดมศึกษา ในสาขาวิชาวิศวกรรมอุตสาหการ</p>
+                <p>ข้าพเจ้ามีความสนใจและมุ่งมั่นที่จะเรียนรู้ในด้านการบริหารจัดการระบบ กระบวนการผลิต และเทคโนโลยีเพื่อเพิ่มประสิทธิภาพการทำงาน ข้าพเจ้าหวังเป็นอย่างยิ่งว่าแฟ้มสะสมผลงานฉบับนี้จะช่วยให้คณะกรรมการได้เห็นถึงความตั้งใจ ศักยภาพ และความพร้อมของข้าพเจ้าในการเข้าศึกษาต่อในสาขาวิชานี้</p>
+                
+                <div class="signature">
+                    นายศักรนันทน์ คำทอง<br>
+                    <strong>ผู้จัดทำ</strong>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="index.html" class="btn-nav">← ย้อนกลับ (หน้าปก)</a>
+                <a href="about.html" class="btn-nav">ถัดไป (About Me) →</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
