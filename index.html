@@ -3,294 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ศักรนันทน์ คำทอง | Portfolio</title>
-
+    <title>หน้าแรก | Portfolio นายศักรนันทน์ คำทอง</title>
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
+        * { box-sizing: border-box; }
         body {
-            margin: 0;
-            min-height: 100vh;
-            padding: 25px 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, Tahoma, sans-serif;
-            text-align: center;
-            color: #263238;
-            background: linear-gradient(
-                135deg,
-                #dff6ff,
-                #bde7f7,
-                #d5f5e8
-            );
+            margin: 0; min-height: 100vh; padding: 25px 15px;
+            display: flex; justify-content: center; align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center; color: #263238;
+            background: linear-gradient(135deg, #dff6ff, #bde7f7, #d5f5e8);
         }
-
         .card {
-            position: relative;
-            isolation: isolate;
-            overflow: hidden;
-            width: 100%;
-            min-height: calc(100vh - 50px);
-            padding: 45px 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 2px solid #c7eaf5;
-            border-radius: 30px;
-            background: rgba(255,255,255,.97);
+            position: relative; width: 100%; max-width: 850px;
+            min-height: calc(100vh - 60px); padding: 45px 25px;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            border: 2px solid #c7eaf5; border-radius: 30px; background: rgba(255,255,255,.97);
             box-shadow: 0 18px 45px rgba(35,90,120,.18);
         }
-
-        .card::before,
-        .card::after {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            border-radius: 50%;
-        }
-
-        .card::before {
-            width: 220px;
-            height: 220px;
-            top: -110px;
-            left: -80px;
-            background: #d5f3ff;
-        }
-
-        .card::after {
-            width: 190px;
-            height: 190px;
-            right: -60px;
-            bottom: -95px;
-            background: #d9f5e8;
-        }
-
-        .decoration {
-            position: relative;
-            z-index: 2;
-            margin-bottom: 20px;
-            font-size: 28px;
-            letter-spacing: 8px;
-        }
-
         .profile-frame {
-            position: relative;
-            z-index: 2;
-            width: 190px;
-            height: 190px;
-            padding: 8px;
-            margin-bottom: 25px;
-            border-radius: 50%;
-            background: linear-gradient(
-                135deg,
-                #29b6f6,
-                #1565c0,
-                #26a69a
-            );
+            width: 200px; height: 200px; padding: 8px; margin-bottom: 25px; border-radius: 50%;
+            background: linear-gradient(135deg, #29b6f6, #1565c0, #26a69a);
             box-shadow: 0 10px 25px rgba(21,101,192,.25);
         }
-
         .profile-frame img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border: 5px solid white;
-            border-radius: 50%;
+            width: 100%; height: 100%; object-fit: cover; border: 5px solid white; border-radius: 50%;
         }
-
         .intro-box {
-            position: relative;
-            z-index: 2;
-            width: 100%;
-            max-width: 700px;
-            padding: 25px 30px;
-            border: 2px solid #c7eaf5;
-            border-radius: 22px;
-            background: #f8fdff;
-            box-shadow: 0 8px 20px rgba(35,90,120,.08);
+            width: 100%; max-width: 650px; padding: 30px;
+            border: 2px solid #c7eaf5; border-radius: 22px; background: #f8fdff;
         }
-
-        .small-title {
-            margin-bottom: 12px;
-            color: #00897b;
-            font-size: 13px;
-            font-weight: bold;
-            letter-spacing: 4px;
-        }
-
-        h1 {
-            margin: 0 0 15px;
-            color: #1565c0;
-            font-size: 38px;
-            line-height: 1.5;
-        }
-
-        .line {
-            width: 70px;
-            height: 4px;
-            margin: 0 auto 20px;
-            border-radius: 10px;
-            background: #29b6f6;
-        }
-
-        p {
-            margin: 12px 0;
-            color: #455a64;
-            font-size: 19px;
-            line-height: 1.9;
-        }
-
-        strong {
-            color: #00897b;
-        }
-
-        .info-box {
-            position: relative;
-            z-index: 2;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            width: 100%;
-            max-width: 700px;
-            margin-top: 20px;
-        }
-
-        .info-card {
-            padding: 18px 15px;
-            border: 2px solid #d5edf5;
-            border-radius: 16px;
-            background: #fff;
-            box-shadow: 0 5px 15px rgba(35,90,120,.06);
-        }
-
-        .info-card h3 {
-            margin: 0 0 8px;
-            color: #1565c0;
-            font-size: 17px;
-        }
-
-        .info-card p {
-            margin: 0;
-            color: #607d8b;
-            font-size: 16px;
-            line-height: 1.6;
-        }
-
+        .small-title { color: #00897b; font-size: 14px; font-weight: bold; letter-spacing: 4px; margin-bottom: 10px; }
+        h1 { margin: 10px 0; color: #1565c0; font-size: 34px; }
+        .line { width: 70px; height: 4px; margin: 15px auto; border-radius: 10px; background: #29b6f6; }
+        p { margin: 12px 0; color: #455a64; font-size: 18px; line-height: 1.6; }
         .btn {
-            position: relative;
-            z-index: 3;
-            display: inline-block;
-            margin-top: 25px;
-            padding: 15px 32px;
-            border-radius: 12px;
-            background: #1565c0;
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            box-shadow: 0 8px 20px rgba(21,101,192,.25);
-            transition: .25s;
+            display: inline-block; margin-top: 30px; padding: 15px 35px; border-radius: 12px;
+            background: #1565c0; color: white; text-decoration: none; font-size: 18px; font-weight: bold;
+            box-shadow: 0 8px 20px rgba(21,101,192,.25); transition: .25s;
         }
-
-        .btn:hover {
-            background: #0d47a1;
-            transform: translateY(-4px);
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 15px;
-            }
-
-            .card {
-                min-height: calc(100vh - 30px);
-                padding: 35px 18px;
-                border-radius: 25px;
-            }
-
-            .profile-frame {
-                width: 150px;
-                height: 150px;
-            }
-
-            h1 {
-                font-size: 28px;
-            }
-
-            p {
-                font-size: 17px;
-            }
-
-            .intro-box {
-                padding: 22px 18px;
-            }
-
-            .info-box {
-                grid-template-columns: 1fr;
-            }
-
-            .btn {
-                padding: 13px 25px;
-                font-size: 16px;
-            }
-        }
+        .btn:hover { background: #0d47a1; transform: translateY(-4px); }
     </style>
 </head>
-
 <body>
 
     <main class="card">
-
-        <div class="decoration">
-            ⚡ 🧢 ✦
-        </div>
-
+        <!-- 📷 ช่องสำหรับใส่รูปโปรไฟล์หน้าแรก -->
         <div class="profile-frame">
-            <img src="70908.jpg" alt="รูปโปรไฟล์">
+            <!-- ✏️ แก้ไขชื่อไฟล์รูปภาพของคุณตรงนี้ (src="...") -->
+            <img src="70908.jpg" alt="รูปโปรไฟล์ศักรนันทน์">
         </div>
 
         <section class="intro-box">
-            <div class="small-title">
-                PORTFOLIO
-            </div>
-
-            <h1>
-                👋 ยินดีต้อนรับสู่โปรไฟล์ของผม
-            </h1>
-
+            <div class="small-title">PORTFOLIO</div>
+            <h1>นายศักรนันทน์ คำทอง</h1>
             <div class="line"></div>
-
-            <p>
-                สวัสดีครับ! ผมชื่อ
-                <strong>นายศักรนันทน์ คำทอง</strong>
-            </p>
-
-            <p>
-                ขณะนี้กำลังศึกษาชั้นมัธยมศึกษาปีที่ 6
+            <p>ขณะนี้กำลังศึกษาชั้น <strong>มัธยมศึกษาปีที่ 6</strong></p>
+            <p><strong>แผนการเรียน:</strong> เตรียมวิศวกรรมศาสตร์</p>
+            <p style="margin-top: 15px; color: #00897b; font-weight: bold;">
+                👋 ยินดีต้อนรับเข้าสู่แฟ้มสะสมผลงานของผมครับ
             </p>
         </section>
 
-        <section class="info-box">
-            <div class="info-card">
-                <h3>🎓 แผนการเรียน</h3>
-                <p>เตรียมวิศวกรรมศาสตร์</p>
-            </div>
-
-            <div class="info-card">
-                <h3>🎯 เป้าหมายในชีวิต</h3>
-                <p>วิศวกรอุตสาหการ</p>
-            </div>
-        </section>
-
-        <a href="portfolio.html" class="btn">
-            📁 ดูแฟ้มสะสมผลงานของฉัน →
-        </a>
-
+        <a href="preface.html" class="btn">เปิดดูแฟ้มสะสมผลงาน (หน้า 2: คำนำ) →</a>
     </main>
 
 </body>
