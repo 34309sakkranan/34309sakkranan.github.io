@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ผลงานทั้งหมด | Portfolio</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; min-height: 100vh; font-family: sans-serif; background: linear-gradient(135deg, #dff6ff, #bde7f7, #d5f5e8); color: #263238; }
+        .top-menu { display: flex; justify-content: center; gap: 8px; padding: 12px; background: rgba(255,255,255,0.98); border-bottom: 2px solid #c7eaf5; position: fixed; top: 0; width: 100%; z-index: 100; flex-wrap: wrap; }
+        .top-menu a { padding: 9px 16px; color: white; background: #1565c0; text-decoration: none; border-radius: 10px; font-size: 13px; font-weight: bold; }
+        .top-menu a:hover, .top-menu a.active { background: #00897b; }
+        .container { padding: 110px 20px 40px; display: flex; justify-content: center; }
+        .card { width: 100%; max-width: 1150px; padding: 40px; border-radius: 25px; background: white; border: 2px solid #c7eaf5; }
+        h1 { color: #1565c0; text-align: center; margin-top: 0; }
+        .line { width: 80px; height: 4px; background: #29b6f6; margin: 10px auto 25px; border-radius: 10px; }
+        
+        .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .work-card { border: 2px solid #d5edf5; border-radius: 18px; padding: 18px; background: #f8fdff; display: flex; flex-direction: column; }
+        
+        /* ช่องใส่รูปผลงาน */
+        .work-img-box { width: 100%; height: 200px; border-radius: 12px; overflow: hidden; border: 1px solid #bde7f7; background: #e0f2fe; margin-bottom: 12px; }
+        .work-img-box img { width: 100%; height: 100%; object-fit: cover; }
+
+        .work-card h3 { color: #1565c0; font-size: 18px; margin: 5px 0 10px; }
+        .work-card p { font-size: 14px; color: #546e7a; margin-bottom: 10px; line-height: 1.6; }
+        .skill-title { color: #00897b; font-weight: bold; font-size: 14px; margin-top: auto; }
+        .skill-list { padding-left: 18px; font-size: 13px; color: #37474f; margin: 5px 0 0; }
+
+        .nav-buttons { display: flex; justify-content: space-between; margin-top: 30px; }
+        .btn-nav { padding: 12px 25px; background: #1565c0; color: white; text-decoration: none; border-radius: 10px; font-weight: bold; }
+        @media(max-width: 900px) { .work-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav class="top-menu">
+        <a href="index.html">1. หน้าปก</a>
+        <a href="preface.html">2. คำนำ</a>
+        <a href="about.html">3. About Me</a>
+        <a href="target.html">4. มหาวิทยาลัย</a>
+        <a href="works.html" class="active">5. ผลงาน</a>
+        <a href="skills.html">6. ทักษะ & กิจกรรม</a>
+        <a href="thankyou.html">7. ขอบคุณ</a>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            <h1>📁 ผลงานและการเข้าร่วมกิจกรรม (PROJECTS & ACTIVITIES)</h1>
+            <div class="line"></div>
+
+            <div class="work-grid">
+                <!-- ผลงานที่ 1 -->
+                <div class="work-card">
+                    <div class="work-img-box">
+                        <img src="9234319A-DC63-40C8-BAF4-268930D2E6AD.jpeg" alt="Mini Startup">
+                    </div>
+                    <h3>การเข้าร่วมอบรม Mini Startup</h3>
+                    <p>เข้าร่วมกระบวนการนำเสนอไอเดียธุรกิจและการพัฒนานวัตกรรมต้นแบบ เพื่อตอบโจทย์ปัญหาจริงของผู้ใช้งาน</p>
+                    <div class="skill-title">💡 ทักษะที่ได้รับ:</div>
+                    <ul class="skill-list">
+                        <li>กระบวนการคิดเชิงออกแบบเพื่อแก้ปัญหา</li>
+                        <li>การวางโครงสร้างโมเดลธุรกิจเบื้องต้น</li>
+                        <li>ทักษะการนำเสนอและสื่อสารไอเดีย</li>
+                    </ul>
+                </div>
+
+                <!-- ผลงานที่ 2 -->
+                <div class="work-card">
+                    <div class="work-img-box">
+                        <img src="210C3E94-6873-48B6-96B9-583C473BB7A2.jpeg" alt="นิทรรศการวันวิทยาศาสตร์">
+                    </div>
+                    <h3>เกียรติบัตร นิทรรศการวันวิทยาศาสตร์</h3>
+                    <p>เข้าร่วมกิจกรรมและจัดแสดงผลงานเชิงวิทยาศาสตร์ ประยุกต์ใช้กระบวนการทางวิทยาศาสตร์ในการทดลอง</p>
+                    <div class="skill-title">💡 ทักษะที่ได้รับ:</div>
+                    <ul class="skill-list">
+                        <li>การคิดแบบเป็นเหตุเป็นผลทางวิทยาศาสตร์</li>
+                        <li>การเก็บรวบรวมและวิเคราะห์ข้อมูล</li>
+                        <li>การทำงานร่วมกับผู้อื่น</li>
+                    </ul>
+                </div>
+
+                <!-- ผลงานที่ 3 -->
+                <div class="work-card">
+                    <div class="work-img-box">
+                        <img src="74AEBD01-89FA-48C3-A213-C8168B6F1146.jpeg" alt="BB Young Investor">
+                    </div>
+                    <h3>รองชนะเลิศอันดับ 1 BB Young Investor</h3>
+                    <p>แข่งขันจำลองการลงทุนและการวางแผนการเงิน นำความรู้ด้านเศรษฐศาสตร์และการวิเคราะห์สภาวะตลาดมาตัดสินใจ</p>
+                    <div class="skill-title">💡 ทักษะที่ได้รับ:</div>
+                    <ul class="skill-list">
+                        <li>การวิเคราะห์งบการเงินและบริหารความเสี่ยง</li>
+                        <li>ประเมินมูลค่าทางคณิตศาสตร์การเงิน</li>
+                        <li>การตัดสินใจเชิงวางแผนภายใต้สภาวะตลาด</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <a href="target.html" class="btn-nav">← ย้อนกลับ (มหาวิทยาลัย)</a>
+                <a href="skills.html" class="btn-nav">ถัดไป (ทักษะ & กิจกรรม) →</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
