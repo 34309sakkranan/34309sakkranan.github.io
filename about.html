@@ -29,9 +29,9 @@
         .education-list { background: #f8fdff; padding: 20px; border-radius: 15px; border: 1px solid #d5edf5; margin-bottom: 20px; }
         .edu-item { margin-bottom: 15px; padding-left: 15px; border-left: 3px solid #29b6f6; }
 
-        /* ช่องสี่เหลี่ยมเตรียมไว้ให้ใส่รูปภาพในอนาคต */
+        /* ช่องสี่เหลี่ยมใส่รูปภาพการศึกษา */
         .image-placeholder-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 15px; }
-        .image-box { height: 180px; border: 2px dashed #90caf9; border-radius: 15px; background: #f0fdf4; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #546e7a; text-align: center; padding: 10px; }
+        .image-box { height: 220px; border: 2px dashed #90caf9; border-radius: 15px; background: #f0fdf4; display: flex; flex-direction: column; justify-content: center; align-items: center; color: #546e7a; text-align: center; padding: 5px; overflow: hidden; }
         .image-box img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
 
         .nav-buttons { display: flex; justify-content: space-between; margin-top: 30px; }
@@ -59,11 +59,10 @@
             <div class="profile-section">
                 <!-- 📷 ช่องรูปภาพโปรไฟล์ -->
                 <div class="img-frame">
-                    <!-- ✏️ ใส่พาธรูปโปรไฟล์ของคุณตรงนี้ -->
                     <img src="70908.jpg" alt="รูปโปรไฟล์ศักรนันทน์">
                 </div>
 
-                <!-- ✏️ แก้ไขตารางข้อมูลส่วนตัวของคุณด้านล่างนี้ -->
+                <!-- ตารางข้อมูลส่วนตัว -->
                 <table class="info-table">
                     <tr>
                         <td class="label">ชื่อ-นามสกุล:</td>
@@ -71,11 +70,11 @@
                     </tr>
                     <tr>
                         <td class="label">ชื่อเล่น:</td>
-                        <td><!-- ✏️ ใส่ชื่อเล่นของคุณตรงนี้ --> ซัน </td>
+                        <td>ซัน</td>
                     </tr>
                     <tr>
                         <td class="label">วัน/เดือน/ปีเกิด:</td>
-                        <td><!-- ✏️ ใส่ วัน/เดือน/ปีเกิด ตรงนี้ -->  2 มีนาคม 2552 </td>
+                        <td>2 มีนาคม 2552</td>
                     </tr>
                     <tr>
                         <td class="label">ระดับการศึกษา:</td>
@@ -87,7 +86,7 @@
                     </tr>
                     <tr>
                         <td class="label">ช่องทางติดต่อ:</td>
-                        <td><!-- ✏️ ใส่ช่องทางติดต่อตรงนี้ --> 0927814013 </td>
+                        <td>0927814013</td>
                     </tr>
                 </table>
             </div>
@@ -97,13 +96,11 @@
             <div class="education-list">
                 <div class="edu-item">
                     <strong>ประถมศึกษา:</strong> 
-                    <!-- ✏️ ใส่ชื่อโรงเรียนประถม -->
-                     โรงเรียน บุญประทีปวิทยาคาร 
+                    โรงเรียน บุญประทีปวิทยาคาร
                 </div>
                 <div class="edu-item">
                     <strong>มัธยมศึกษาตอนต้น:</strong> 
-                    <!-- ✏️ ใส่ชื่อโรงเรียนมัธยมต้น -->
-                     โรงเรียน บ้านบึงอุตสาหกรรมนุเคราะห์ 
+                    โรงเรียน บ้านบึงอุตสาหกรรมนุเคราะห์
                 </div>
                 <div class="edu-item">
                     <strong>มัธยมศึกษาตอนปลาย:</strong> 
@@ -111,15 +108,14 @@
                 </div>
             </div>
 
-            <!-- 📷 ช่องสำหรับนำรูปภาพสถานศึกษา/รูปกิจกรรมมาลงเพิ่มทีหลัง -->
-            <h3 style="color: #455a64; margin-bottom: 5px;">📷 รูปภาพบรรยากาศการศึกษา (แอดรูปทีหลัง)</h3>
+            <!-- 📷 ช่องรูปภาพบรรยากาศการศึกษา -->
+            <h3 style="color: #455a64; margin-bottom: 5px;">📷 รูปภาพบรรยากาศการศึกษา</h3>
             <div class="image-placeholder-grid">
                 <div class="image-box">
-                    <!-- หากมีรูปให้เปลี่ยนโค้ดเป็น <img src="71748ปะถม.jpg"> ได้เลยครับ -->
-                    <span>71748ปะถม.jpg</span>
+                    <img src="71748ปะถม.jpg" alt="บรรยากาศการศึกษาประถมศึกษา">
                 </div>
                 <div class="image-box">
-                    <span>71747มัทยม.jpg</span>
+                    <img src="71747มัทยม.jpg" alt="บรรยากาศการศึกษามัธยมศึกษา">
                 </div>
             </div>
 
