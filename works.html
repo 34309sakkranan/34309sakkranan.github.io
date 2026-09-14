@@ -15,7 +15,7 @@
         h1, h2 { color: #1565c0; text-align: center; margin-top: 0; }
         .line { width: 80px; height: 4px; background: #29b6f6; margin: 10px auto 25px; border-radius: 10px; }
         
-        /* Grid ผลงานเดิม */
+        /* Grid ผลงานหลัก */
         .work-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .work-card { border: 2px solid #d5edf5; border-radius: 18px; padding: 18px; background: #f8fdff; display: flex; flex-direction: column; }
         
@@ -27,24 +27,43 @@
         .skill-title { color: #00897b; font-weight: bold; font-size: 14px; margin-top: auto; }
         .skill-list { padding-left: 18px; font-size: 13px; color: #37474f; margin: 5px 0 0; }
 
-        /* ส่วนกิจกรรมด้านล่าง ( Gallery 5 ช่อง ) */
+        /* โซนกิจกรรมด้านล่าง ( Gallery 6 ช่อง ) */
         .activity-section { margin-top: 50px; padding-top: 30px; border-top: 2px dashed #bde7f7; }
         .activity-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 25px; }
         
+        .activity-card {
+            border: 2px solid #d5edf5;
+            border-radius: 18px;
+            padding: 12px;
+            background: #f8fdff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        }
+
         .activity-photo-box { 
             width: 100%; 
-            height: 220px; 
-            border-radius: 16px; 
+            height: 200px; 
+            border-radius: 12px; 
             overflow: hidden; 
-            border: 2px solid #bde7f7; 
+            border: 1px solid #bde7f7; 
             background: #f0f9ff; 
             display: flex; 
             justify-content: center; 
             align-items: center; 
-            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            margin-bottom: 10px;
         }
         .activity-photo-box img { width: 100%; height: 100%; object-fit: cover; }
         .placeholder-text { color: #00897b; font-weight: bold; font-size: 14px; }
+        
+        .activity-card h4 {
+            color: #1565c0;
+            font-size: 15px;
+            margin: 4px 0 6px;
+            line-height: 1.4;
+        }
 
         .nav-buttons { display: flex; justify-content: space-between; margin-top: 40px; }
         .btn-nav { padding: 12px 25px; background: #1565c0; color: white; text-decoration: none; border-radius: 10px; font-weight: bold; }
@@ -149,41 +168,64 @@
                 </div>
             </div>
 
-            <!-- โซนที่ 2: ช่องใส่รูปกิจกรรม 5 ช่อง (แบบไม่ต้องมีคำอธิบาย) -->
+            <!-- โซนที่ 2: ช่องใส่รูปกิจกรรม 6 ช่อง พร้อมหัวข้อเรียบเรียงใหม่ -->
             <div class="activity-section">
                 <h2>📸 ภาพบรรยากาศกิจกรรมอื่นๆ (ACTIVITIES GALLERY)</h2>
                 <div class="line"></div>
 
                 <div class="activity-grid">
-                    <!-- รูปกิจกรรมที่ 1 -->
-                    <div class="activity-photo-box">
-                        <!-- ใส่ชื่อไฟล์รูปภาพกิจกรรมที่ 1 ในช่อง src="ชื่อไฟล์.jpg" ด้านล่างนี้ได้เลยครับ -->
-                        <img src="act1.jpg" alt="ภาพกิจกรรม 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <div class="placeholder-text" style="display:none;">📷 รูปกิจกรรม 1</div>
+                    <!-- กิจกรรมที่ 1 -->
+                    <div class="activity-card">
+                        <div class="activity-photo-box">
+                            <img src="act1.jpg" alt="การทำงานร่วมกันเป็นทีม" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="placeholder-text" style="display:none;">📷 ใส่รูปกิจกรรม 1</div>
+                        </div>
+                        <h4>กิจกรรมเสริมสร้างทักษะการทำงานร่วมกันเป็นทีม (Teamwork Collaboration)</h4>
                     </div>
 
-                    <!-- รูปกิจกรรมที่ 2 -->
-                    <div class="activity-photo-box">
-                        <img src="act2.jpg" alt="ภาพกิจกรรม 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <div class="placeholder-text" style="display:none;">📷 รูปกิจกรรม 2</div>
+                    <!-- กิจกรรมที่ 2 -->
+                    <div class="activity-card">
+                        <div class="activity-photo-box">
+                            <img src="act2.jpg" alt="อบรมกระบวนการคิดทางวิศวกรรม" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="placeholder-text" style="display:none;">📷 ใส่รูปกิจกรรม 2</div>
+                        </div>
+                        <h4>การอบรมกระบวนการคิดเชิงวิศวกรรม (Engineering Mindset Workshop) โรงเรียนบ้านบึงอุตสาหกรรมนุเคราะห์</h4>
                     </div>
 
-                    <!-- รูปกิจกรรมที่ 3 -->
-                    <div class="activity-photo-box">
-                        <img src="act3.jpg" alt="ภาพกิจกรรม 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <div class="placeholder-text" style="display:none;">📷 รูปกิจกรรม 3</div>
+                    <!-- กิจกรรมที่ 3 -->
+                    <div class="activity-card">
+                        <div class="activity-photo-box">
+                            <img src="act3.jpg" alt="KMUTT Engineering Open House" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="placeholder-text" style="display:none;">📷 ใส่รูปกิจกรรม 3</div>
+                        </div>
+                        <h4>เข้าร่วมเปิดโลกการเรียนรู้ KMUTT Engineering Open House (มจธ. บางมด)</h4>
                     </div>
 
-                    <!-- รูปกิจกรรมที่ 4 -->
-                    <div class="activity-photo-box">
-                        <img src="act4.jpg" alt="ภาพกิจกรรม 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <div class="placeholder-text" style="display:none;">📷 รูปกิจกรรม 4</div>
+                    <!-- กิจกรรมที่ 4 -->
+                    <div class="activity-card">
+                        <div class="activity-photo-box">
+                            <img src="act4.jpg" alt="การออกแบบโครงสร้างเชิงวิศวกรรม" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="placeholder-text" style="display:none;">📷 ใส่รูปกิจกรรม 4</div>
+                        </div>
+                        <h4>การออกแบบและทดสอบเสถียรภาพโครงสร้างเชิงวิศวกรรม (Structural Stability Project)</h4>
                     </div>
 
-                    <!-- รูปกิจกรรมที่ 5 -->
-                    <div class="activity-photo-box">
-                        <img src="act5.jpg" alt="ภาพกิจกรรม 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                        <div class="placeholder-text" style="display:none;">📷 รูปกิจกรรม 5</div>
+                    <!-- กิจกรรมที่ 5 -->
+                    <div class="activity-card">
+                        <div class="activity-photo-box">
+                            <img src="act5.jpg" alt="วิทยากรงานเปิดบ้านวิศวะ" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="placeholder-text" style="display:none;">📷 ใส่รูปกิจกรรม 5</div>
+                        </div>
+                        <h4>ปฏิบัติหน้าที่วิทยากรประจำฐานกิจกรรม งานเปิดบ้านวิศวกรรมศาสตร์ (Engineering Open House)</h4>
+                    </div>
+
+                    <!-- กิจกรรมที่ 6 -->
+                    <div class="activity-card">
+                        <div class="activity-photo-box">
+                            <img src="act6.jpg" alt="การแข่งขันคิดเลขเร็วทางคณิตศาสตร์" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                            <div class="placeholder-text" style="display:none;">📷 ใส่รูปกิจกรรม 6</div>
+                        </div>
+                        <h4>การเข้าร่วมแข่งขันคำนวณและคิดเลขเร็วทางคณิตศาสตร์ (Speed Math Competition)</h4>
                     </div>
                 </div>
             </div>
